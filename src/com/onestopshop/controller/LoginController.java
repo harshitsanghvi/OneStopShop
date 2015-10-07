@@ -11,7 +11,7 @@ import com.onestopshop.model.LoginModel;
 @Controller
 public class LoginController {
 	
-	@RequestMapping(value="/login", method = RequestMethod.POST)
+	@RequestMapping(value="/verify", method = RequestMethod.POST)
 	public String addEmp(LoginBean login) {
 		
 		LoginModel objLoginModel = new LoginModel();
@@ -19,5 +19,10 @@ public class LoginController {
 			return "error";
 		}
 		return "index";
+	}
+	
+	@RequestMapping(value="/login", method = RequestMethod.GET)
+	public String fetchLoginPage() {
+		return "login";
 	}
 }
