@@ -17,8 +17,8 @@ pageEncoding="ISO-8859-1"%>
 			<div class="row">
 				<div class="col-lg-12">
 					<div class="intro-message">
-						<h1>OneStopShop</h1>
-						<h3>Your one stop for anything and everything.</h3>
+						<h1>Welcome ${name}!</h1>
+						<h3>View and edit your profile</h3>
 						<hr class="intro-divider">
 
 						<div class="container">
@@ -37,17 +37,22 @@ pageEncoding="ISO-8859-1"%>
 											<div class="tab-content">
 												<div class="col-lg-12 tab-pane fade in active"
 													id="tab1default">
-													<form:form id="login-form" action="login" method="post"
+													<form id="login-form" action="process" method="post"
 														role="form">
 														<div class="form-group">
-															<form:input path="email" type="email" name="email" id="email" tabindex="1"
+															<input type="email" name="email" id="email" tabindex="1"
 																class="form-control" placeholder="Email" value=""
-																required />
+																required>
 														</div>
 														<div class="form-group">
-															<form:input path="password" type="password" name="password" id="password"
+															<input type="password" name="password" id="password"
 																tabindex="2" class="form-control" placeholder="Password"
-																required />
+																required>
+														</div>
+														<div class="form-group text-center" style="display: none">
+															<input type="checkbox" tabindex="3" class=""
+																name="remember" id="remember"> <label
+																for="remember"> Remember Me</label>
 														</div>
 														<div class="form-group">
 															<div class="row">
@@ -58,20 +63,20 @@ pageEncoding="ISO-8859-1"%>
 																</div>
 															</div>
 														</div>
-													</form:form>
+													</form>
 												</div>
 												<div class="col-lg-12 tab-pane fade" id="tab2default">
-													<form:form id="register-form" action="register" method="post"
+													<form id="register-form" action="register" method="post"
 														role="form">
 														<div class="form-group">
-															<form:input path="email" type="email" name="email" id="email" tabindex="1"
+															<input type="email" name="email" id="email" tabindex="1"
 																class="form-control" placeholder="Email Address"
-																value="" required />
+																value="" required>
 														</div>
 														<div class="form-group">
-															<form:input path="password" type="password" name="password" id="rPassword"
+															<input type="password" name="password" id="rPassword"
 																tabindex="2" class="form-control" placeholder="Password"
-																required />
+																required>
 														</div>
 														<div class="form-group">
 															<input type="password" name="confirm-password"
@@ -79,19 +84,19 @@ pageEncoding="ISO-8859-1"%>
 																placeholder="Confirm Password" onblur="match()" required>
 														</div>
 														<div class="form-group">
-															<form:input path="firstName" type="text" name="firstName" id="firstName"
+															<input type="text" name="firstName" id="firstName"
 																tabindex="4" class="form-control"
-																placeholder="First Name" value="" required />
+																placeholder="First Name" value="" required>
 														</div>
 														<div class="form-group">
-															<form:input path="lastName" type="text" name="lastName" id="lastName"
+															<input type="text" name="lastName" id="lastName"
 																tabindex="5" class="form-control"
-																placeholder="Last Name" value="" required />
+																placeholder="Last Name" value="" required>
 														</div>
 														<div class="form-group">
-															<form:input path="phoneNumber" type="tel" name="phoneNumber" id="phoneNumber"
+															<input type="tel" name="phoneNumber" id="phoneNumber"
 																tabindex="6" class="form-control"
-																placeholder="Phone Number" value="" required />
+																placeholder="Phone Number" value="" required>
 														</div>
 														<div class="form-group">
 															<div class="row">
@@ -103,7 +108,7 @@ pageEncoding="ISO-8859-1"%>
 																</div>
 															</div>
 														</div>
-													</form:form>
+													</form>
 												</div>
 											</div>
 										</div>
