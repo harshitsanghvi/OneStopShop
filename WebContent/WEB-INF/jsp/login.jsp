@@ -8,31 +8,15 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<form:form method="POST" action="login" commandName="login">
+	<form:form method="post" action="verify" commandName="login">
 		<table>
 			<tr>
-				<td><form:label path="fName">First Name</form:label></td>
-				<td><form:input path="fName" /></td>
+				<td><form:label path="uname">Username</form:label></td>
+				<td><form:input path="uname" /></td>
 			</tr>
 			<tr>
-				<td><form:label path="lName">Last Name</form:label></td>
-				<td><form:input path="lName" /></td>
-			</tr>
-			<tr>
-				<td><form:label path="uName">Username</form:label></td>
-				<td><form:input path="uName" /></td>
-			</tr>
-			<tr>
-				<td><form:label path="phoneNumber">Phone Number</form:label></td>
-				<td><form:input path="phoneNumber" /></td>
-			</tr>
-			<tr>
-				<td><form:label path="address">Address</form:label></td>
-				<td><form:input path="address" /></td>
-			</tr>
-			<tr>
-				<td><form:label path="dob">Date of Birth</form:label></td>
-				<td><form:input path="dob" /></td>
+				<td><form:label path="password">Password</form:label></td>
+				<td><form:input path="password" /></td>
 			</tr>
 			<tr>
 				<td colspan="2"><input type="submit" /></td>
