@@ -1,0 +1,9 @@
+@CHARSET "ISO-8859-1";
+
+div.navbar {
+	display: flex; justify-content: space-between; background-color:#C8C8C8;
+}
+
+div.nav {
+	font-color: red; padding: 15px
+}
