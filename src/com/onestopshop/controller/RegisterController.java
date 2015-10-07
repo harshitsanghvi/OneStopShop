@@ -15,7 +15,7 @@ public class RegisterController {
 		public String registerPage(RegisterBean register) {
 			
 			RegisterModel objRegisterModel = new RegisterModel();
-			if(objRegisterModel.validateUser( )){
+			if(objRegisterModel.addUser( )){
 				return "error";
 			}
 			return "index";
