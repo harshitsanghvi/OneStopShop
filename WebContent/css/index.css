@@ -1,5 +1,17 @@
 @CHARSET "ISO-8859-1";
-
-div.item {
-	float: left
+ul.products li {
+    width: 200px;
+    display: inline-block;
+    vertical-align: top;
+}
+.form-control {
+	color: #fff;
+	background-color: #59B2E0;
+	border-color: #59B2E6;
+}
+h2 {
+	text-align: center;
+}
+h4 {
+	text-align: center;
 }

@@ -31,6 +31,7 @@
 		<mapping class="com.onestopshop.beans.LoginBean" />
 		<mapping class="com.onestopshop.beans.AddressBean" />
 		<mapping class="com.onestopshop.beans.RegisterBean" />
+		<mapping class="com.onestopshop.beans.Item" />
 		
 		
 

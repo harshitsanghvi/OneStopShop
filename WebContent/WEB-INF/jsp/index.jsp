@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+pageEncoding="ISO-8859-1"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -11,13 +12,19 @@
 <link href="${pageContext.request.contextPath}/css/index.css" rel="stylesheet">
 </head>
 <body>
-Welcome!
-<div id="item" class="item">
-	<h2>${title}</h2>
-	<h4>${description}</h4>
-	<img id="${image}" src="../../img/coconuts.jpg" width="200" height="200" alt="Item image">
-	<p>price: $${price}</p>
-	<input type="button" name="purchase" id="${item}PurchaseButton" class="form-control btn btn-login" value="Purchase">
-</div>
+	Welcome!
+	<ul class="products">
+		<c:forEach items="${items}" var="item">
+			<li>
+				<h2>${item.title}</h2>
+				<h4>${item.description}</h4>
+				<img id="image" src="${item.image}" width="200"
+					height="200" alt="Product image">
+				<h4>$${item.price}</h4>
+				<input type="button" name="purchase" id="${item.title}PurchaseButton"
+					class="form-control btn btn-login" value="Add to Cart">
+			</li>
+		</c:forEach>
+	</ul>
 </body>
 </html>
