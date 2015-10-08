@@ -27,6 +27,8 @@ public class RegisterDao {
 
 			String USERPROFILE_QUERY = "insert into RegisterBean VALUES (firstName, lastName, userId, phone, addressId) ";
 			Long userprofile_id = (Long) session.save(USERPROFILE_QUERY);
+			
+			
 
 			tx.commit();
 
