@@ -69,6 +69,15 @@ public class AddToCartController {
 	public String remove(@RequestParam(value="id") int id,HttpSession session ){
 		List<Cart> list = (List<Cart>) session.getAttribute("cart");
 		if(list!=null)
+		{for(Cart cart:list){
+			if(cart.getId()==id){
+				list.remove(cart);
+				break;
+			}
+		}
+		session.setAttribute("cart", list);
+		session.setAttribute("total", getTotal(list));
+
 		return "cart";
 	}
 
