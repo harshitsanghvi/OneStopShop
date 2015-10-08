@@ -15,19 +15,20 @@ import com.onestopshop.model.RegisterModel;
 @Controller
 public class RegisterController {
 
-	@RequestMapping(value = "/addUser", method = RequestMethod.GET)
-	public String registerPage(@Valid RegisterBean register, @Valid AddressBean address, @Valid LoginBean login) {
+	@RequestMapping(value = "/addUser", method = RequestMethod.POST)
+	public String registerPage(RegisterBean register, AddressBean address, LoginBean login) {
 
 		RegisterModel objRegModel = new RegisterModel();
 		if(objRegModel.addUser(register, address, login)){
-			return "profile";
+			return "index";
 		}
 		return "errors";
 	}
 
 	@RequestMapping(value = "/register", method = RequestMethod.GET)
 	public ModelAndView RegisterPage() {
-		return new ModelAndView("profile", "profile", new RegisterBean());
+		
+		return new ModelAndView("register", "register", new RegisterBean());
 	}
 
 }

@@ -9,24 +9,26 @@ import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.hibernate.cfg.Configuration;
 
+import com.onestopshop.beans.LoginBean;
+
 public class LoginDao {
 
 	private int count;
+	SessionFactory factory;
 
-	public boolean checkLogin(String uname, String password) {
-
-		SessionFactory factory;
+	public boolean checkLogin(LoginBean login) {
 		factory = new Configuration().configure().buildSessionFactory();
 		Session session = factory.openSession();
 		Transaction tx = null;
 
+
 		try {
 			tx = session.beginTransaction();
-			String SQL_QUERY = "select login.uname,login.password from LoginBean as login where login.uname="
-					+ uname + " and login.password=" + password + " ";
+			String SQL_QUERY = "select login.uname,login.password from LoginBean as login where login.uname='"
+					+ login.getUname() + "' and login.password='" + login.getPassword() + "' ";
 			Query query = session.createQuery(SQL_QUERY);
 
-			for (Iterator iterator = query.iterate(); iterator.hasNext();) {
+			for (Iterator<?> iterator = query.iterate(); iterator.hasNext();) {
 				iterator.next();
 				count++;
 			}
@@ -43,6 +45,5 @@ public class LoginDao {
 			session.close();
 		}
 		return false;
-
 	}
 }

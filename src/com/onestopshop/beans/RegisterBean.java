@@ -6,40 +6,48 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-import org.hibernate.validator.constraints.NotEmpty;
-
 @Entity
 @Table(name = "USERPROFILE")
 public class RegisterBean {
 	
 	@Id @GeneratedValue
 	@Column(name="ID", nullable = false)
-	private long id;
+	private Long id;
 	
-	@NotEmpty
 	@Column(name = "FIRSTNAME", nullable = false)
 	private String firstName;
 	
-	@NotEmpty
 	@Column(name = "LASTNAME", nullable = false)
 	private String lastName;
 	
-	@NotEmpty
+	private String uname;
+	private String password;
+
 	@Column(name = "USERID", nullable = false)
-	private long userId;
+	private Long userId;
 	
-	@NotEmpty
 	@Column(name = "PHONE", nullable = false)
-	private long phone;
+	private Long phone;
 	
-	@NotEmpty
+	private String addressLineOne;
+	
+	private String addressLineTwo;
+	
+	private String city;
+	
+	private String state;
+	
+	private String country;
+	
+	private Integer zip;
+	
 	@Column(name = "ADDRESSID", nullable = false)
-	private long addressId;
+	private Long addressId;
 	
-	public long getId() {
+	public Long getId() {
 		return id;
 	}
-	public void setId(long id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 	public String getFirstName() {
@@ -48,28 +56,77 @@ public class RegisterBean {
 	public void setFirstName(String firstName) {
 		this.firstName = firstName;
 	}
-	public String getLastname() {
+	public String getLastName() {
 		return lastName;
 	}
-	public void setLastname(String lastname) {
-		this.lastName = lastname;
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
 	}
-	public long getPhone() {
+	public Long getPhone() {
 		return phone;
 	}
-	public void setPhone(long phone) {
+	public void setPhone(Long phone) {
 		this.phone = phone;
 	}
-	public long getUserId() {
+	public Long getUserId() {
 		return userId;
 	}
-	public void setUserId(long userId) {
+	public void setUserId(Long userId) {
 		this.userId = userId;
 	}
-	public long getAddressId() {
+	public Long getAddressId() {
 		return addressId;
 	}
-	public void setAddressId(long addressId) {
+	public void setAddressId(Long addressId) {
 		this.addressId = addressId;
 	}
+	public String getUname() {
+		return uname;
+	}
+	public void setUname(String uname) {
+		this.uname = uname;
+	}
+	public String getPassword() {
+		return password;
+	}
+	public void setPassword(String password) {
+		this.password = password;
+	}
+	public String getAddressLineOne(){
+		return addressLineOne;
+	}
+	public void setAddressLineOne(String addressLineOne) {
+		this.addressLineOne = addressLineOne;
+	}
+	public String getAddressLineTwo() {
+		return addressLineTwo;
+	}
+	public void setAddressLineTwo(String addressLineTwo) {
+		this.addressLineTwo = addressLineTwo;
+	}
+	public String getCity() {
+		return city;
+	}
+	public void setCity(String city) {
+		this.city = city;
+	}
+	public String getState() {
+		return state;
+	}
+	public void setState(String state) {
+		this.state = state;
+	}
+	public String getCountry() {
+		return country;
+	}
+	public void setCountry(String country) {
+		this.country = country;
+	}
+	public Integer getZip() {
+		return zip;
+	}
+	public void setZip(Integer zip) {
+		this.zip = zip;
+	}
+
 }

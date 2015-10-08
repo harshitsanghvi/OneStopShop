@@ -15,7 +15,7 @@ import com.onestopshop.model.LoginModel;
 public class LoginController {
 
 	@RequestMapping(value = "/verify", method = RequestMethod.POST)
-	public String loginPage(@Valid LoginBean login, BindingResult result) {
+	public String loginPage( LoginBean login, BindingResult result) {
 
 		if (result.hasErrors()) {
 			return "errors";
@@ -25,7 +25,7 @@ public class LoginController {
 		LoginModel objLoginModel = new LoginModel();
 		System.out.println(uname + password);
 		if (uname != null && password != null) {
-			if (objLoginModel.validateUser(uname, password)) {
+			if (objLoginModel.validateUser(login)) {
 				return "index";
 			}
 		}
@@ -33,7 +33,7 @@ public class LoginController {
 	}
 
 	@RequestMapping(value = "/login", method = RequestMethod.GET)
-	public ModelAndView fetchLoginPage() {
+	public ModelAndView RegisterPage() {
 		return new ModelAndView("login", "login", new LoginBean());
 	}
 }

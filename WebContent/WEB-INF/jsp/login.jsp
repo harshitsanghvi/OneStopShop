@@ -41,12 +41,12 @@
 													<form:form id="login-form" method="post" action="verify" commandName="login"
 														role="form">
 														<div class="form-group">
-															<form:input path="uname" type="text" name="uname" id="uname" tabindex="1" class="form-control" placeholder="Username" />
+															<form:input path="uname" type="text" tabindex="1" cssClass="form-control" placeholder="Username" />
 <!-- 															find way to add "required" tag later  -->
 														</div>
 														<div class="form-group">
-															<form:input path="password" type="password" name="password" id="password"
- 																tabindex="2" class="form-control" placeholder="Password" />
+															<form:input path="password" type="password"
+ 																tabindex="2" cssClass="form-control" placeholder="Password" />
 														</div>
 														<div class="form-group">
 															<div class="row">
@@ -58,79 +58,6 @@
 															</div>
 														</div>
 													</form:form>
-												</div>
-												<div class="col-lg-12 tab-pane fade" id="tab2default">
-													<form:form id="register-form" method="post" action="addUser" commandName="login"
- 														role="form"> 
-														<div class="form-group">
- 															<form:input path="uname" type="text" name="uname" id="uname" tabindex="1" 
- 																class="form-control" placeholder="Username" /> 
- 														</div> 
- 														<div class="form-group"> 
- 															<form:input path="password" type="password" name="password" id="rPassword" 
- 																tabindex="2" class="form-control" placeholder="Password" /> 
- 														</div> 
- 														<div class="form-group"> 
- 															<input type="password" name="confirm-password" 
- 																id="confirm-password" tabindex="3" class="form-control" 
- 																placeholder="Confirm Password" onblur="match()" required> 
- 														</div> 
- 														<div class="form-group"> 
- 															<form:input path="firstName" type="text" name="firstName" id="firstName" 
- 																tabindex="4" class="form-control" 
- 																placeholder="First Name" /> 
- 														</div> 
- 														<div class="form-group"> 
- 															<form:input path="lastName" type="text" name="lastName" id="lastName" 
- 																tabindex="5" class="form-control" 
- 																placeholder="Last Name" /> 
- 														</div> 
- 														<div class="form-group"> 
- 															<form:input path="phone" type="tel" name="phone" id="phone" 
- 																tabindex="6" class="form-control" 
- 																placeholder="Phone Number" /> 
- 														</div>
-														<div class="form-group">
-															<form:input path="addressline1" type="text" name="addressline1"
-																id="addressline1" tabindex="7" class="form-control"
-																placeholder="Address Line1"  />
-														</div>
-														<div class="form-group">
-															<form:input path="addressline2" type="text" name="addressline2"
-																id="addressline2" tabindex="8" class="form-control"
-																placeholder="Address Line 2"  />
-														</div>
-														<div class="form-group">
-															<form:input path="city" type="text" name="city"
-																id="city" tabindex="9" class="form-control"
-																placeholder="City"  />
-														</div>
-														<div class="form-group">
-															<form:input path="state" type="text" name="state"
-																id="state" tabindex="10" class="form-control"
-																placeholder="State"  />
-														</div>
-														<div class="form-group">
-															<form:input path="country" type="text" name="country"
-																id="country" tabindex="11" class="form-control"
-																placeholder="Country"  />
-														</div>
-														<div class="form-group">
-															<form:input path="zip" type="text" name="zip"
-																id="zip" tabindex="12" class="form-control"
-																placeholder="Zip Code"  />
-														</div>
-														<div class="form-group"> 
- 															<div class="row"> 
- 																<div class="col-sm-6 col-sm-offset-3"> 
- 																	<input type="submit" name="register-submit" 
- 																		id="register-submit" tabindex="7" 
- 																		class="form-control btn btn-register" 
- 																		value="Register Now"> 
- 																</div> 
- 															</div> 
- 														</div> 
- 													</form:form> 
 												</div>
 											</div>
 										</div>

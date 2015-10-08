@@ -27,10 +27,10 @@
 		<property name="suffix" value=".jsp"></property>
 	</bean>
 
-	<bean id="messageSource"
+	<!-- <bean id="messageSource"
 		class="org.springframework.context.support.ResourceBundleMessageSource">
 		<property name="basename">
 			<value>resources/messages</value>
 		</property>
-	</bean>
+	</bean> -->
 </beans>

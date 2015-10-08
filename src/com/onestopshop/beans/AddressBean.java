@@ -6,11 +6,11 @@ import org.hibernate.validator.constraints.NotEmpty;
 
 public class AddressBean {
 	@NotEmpty
-	@Column(name = "ADDRESSLINE1", nullable = false)
-	private String addressLine1;
+	@Column(name = "ADDRESSLINEONE", nullable = false)
+	private String addressLineOne;
 	
-	@Column(name = "ADDRESSLINE2")
-	private String addressLine2;
+	@Column(name = "ADDRESSLINETWO")
+	private String addressLineTwo;
 	
 	@NotEmpty
 	@Column(name = "CITY", nullable = false)
@@ -26,22 +26,22 @@ public class AddressBean {
 	
 	@NotEmpty
 	@Column(name = "ZIP", nullable = false)
-	private int zip;
+	private Integer zip;
 
-	public String getAddressLine1() {
-		return addressLine1;
+	public String getAddressLineOne() {
+		return addressLineOne;
 	}
 
-	public void setAddressLine1(String addressLine1) {
-		this.addressLine1 = addressLine1;
+	public void setAddressLine1(String addressLineOne) {
+		this.addressLineOne = addressLineOne;
 	}
 
-	public String getAddressLine2() {
-		return addressLine2;
+	public String getAddressLineTwo() {
+		return addressLineTwo;
 	}
 
-	public void setAddressLine2(String addressLine2) {
-		this.addressLine2 = addressLine2;
+	public void setAddressLineTwo(String addressLineTwo) {
+		this.addressLineTwo = addressLineTwo;
 	}
 
 	public String getCity() {
@@ -68,11 +68,11 @@ public class AddressBean {
 		this.country = country;
 	}
 
-	public int getZip() {
+	public Integer getZip() {
 		return zip;
 	}
 
-	public void setZip(int zip) {
+	public void setZip(Integer zip) {
 		this.zip = zip;
 	}
 }
