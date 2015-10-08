@@ -36,6 +36,7 @@ public class LoginDao {
 		} catch (HibernateException e) {
 			if (tx != null) {
 				tx.rollback();
+			
 			}
 			e.printStackTrace();
 		} finally {
