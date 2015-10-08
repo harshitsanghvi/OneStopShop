@@ -9,6 +9,7 @@ import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
+import org.hibernate.cfg.AnnotationConfiguration;
 import org.hibernate.cfg.Configuration;
 
 import com.onestopshop.beans.Item;
@@ -16,22 +17,28 @@ import com.onestopshop.beans.Item;
 public class IndexDao {
 
 
-	public boolean getInventory(ArrayList<Item> items) {
+	public boolean getInventory(ArrayList<Item> Items) {
 
 		SessionFactory factory;
-		factory = new Configuration().configure().buildSessionFactory();
+		factory = new AnnotationConfiguration().configure().buildSessionFactory();
 		Session session = factory.openSession();
 		Transaction tx = null;
 
 		try {
 			tx = session.beginTransaction();
-			String SQL_QUERY = "select item.itemname, item.itemdesc, item.itemprice, item.itemimagepath from Item item";
+			String SQL_QUERY = "select title, description, price, image from Item";
 			Query query = session.createQuery(SQL_QUERY);
 
-			items = new ArrayList<Item>();
+			ArrayList<Item> items = new ArrayList<Item>();
 			for (Iterator iterator = query.iterate(); iterator.hasNext();) {
-				Item item = (Item) iterator.next();
+				Object[] row = (Object[]) iterator.next();
+				Item item = new Item();
+				item.setTitle((String) row[0]);
+				item.setDescription((String) row[1]);
+				item.setPrice((double) row[2]);
+				item.setImage((String) row[3]);
 				items.add(item);
+				System.out.println((String) row[0]); 
 			}
 			return true;
 		} catch (HibernateException e) {

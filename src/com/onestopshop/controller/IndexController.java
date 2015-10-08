@@ -18,7 +18,7 @@ public class IndexController {
 	
 	@RequestMapping(value = "/index", method = RequestMethod.GET)
 	public String homePage(ArrayList<Item> items) {
-
+		System.out.println(items.size());
 		IndexModel objIndexModel = new IndexModel();
 		if(objIndexModel.getItems(items)){
 			return "index";

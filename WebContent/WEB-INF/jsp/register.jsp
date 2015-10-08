@@ -38,7 +38,7 @@
                                             <div class="tab-content">
                                                 <div class="col-lg-12 tab-pane fade in active"
                                                     id="tab1default">
-                                                    <form:form id="register-form" method="post" action="/addUser" commandName="register"
+                                                    <form:form id="register-form" method="post" action="addUser" commandName="register"
                                                         role="form"> 
                                                         <div class="form-group">
                                                             <form:input path="uname" type="text" name="uname" id="uname" tabindex="1" 

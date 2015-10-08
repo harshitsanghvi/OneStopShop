@@ -25,7 +25,7 @@ public class RegisterDao {
 			Long userId = (Long) session.save(login);
 
 			Long addressId = (Long) session.save(address);
-
+			System.out.println(userId+addressId);
 			register.setUserId(userId);
 			register.setAddressId(addressId);
 			Long userprofileId = (Long) session.save(register);
