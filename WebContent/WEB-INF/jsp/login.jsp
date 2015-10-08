@@ -13,10 +13,12 @@
 			<tr>
 				<td><form:label path="uname">Username</form:label></td>
 				<td><form:input path="uname" /></td>
+				<td><form:errors path="uname" cssClass="errMsg"/></td>
 			</tr>
 			<tr>
 				<td><form:label path="password">Password</form:label></td>
 				<td><form:input path="password" /></td>
+				<td><form:errors path="password" cssClass="errMsg"/></td>
 			</tr>
 			<tr>
 				<td colspan="2"><input type="submit" /></td>

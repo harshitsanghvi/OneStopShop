@@ -22,7 +22,7 @@ public class LoginDao {
 
 		try {
 			tx = session.beginTransaction();
-			String SQL_QUERY = "select login.uname,login.password from Loginbean as login where login.uName="
+			String SQL_QUERY = "select login.uname,login.password from LoginBean as login where login.uname="
 					+ uname + " and login.password=" + password + " ";
 			Query query = session.createQuery(SQL_QUERY);
 
@@ -36,6 +36,7 @@ public class LoginDao {
 		} catch (HibernateException e) {
 			if (tx != null) {
 				tx.rollback();
+			
 			}
 			e.printStackTrace();
 		} finally {
