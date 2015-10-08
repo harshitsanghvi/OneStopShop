@@ -29,10 +29,10 @@ public class RegisterController {
 						
 			return "profile";
 		}
-			/*@RequestMapping(value = "/register", method = RequestMethod.GET)
+			@RequestMapping(value = "/register", method = RequestMethod.GET)
 			public ModelAndView RegisterPage() {
 				return new ModelAndView("profile", "profile", new RegisterBean());
 		
-}*/
+}
 
 }
