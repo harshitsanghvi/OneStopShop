@@ -60,7 +60,7 @@
 													</form:form>
 												</div>
 												<div class="col-lg-12 tab-pane fade" id="tab2default">
-													<form:form id="register-form" method="post" action="addUser" commandName="register"
+													<form:form id="register-form" method="post" action="addUser" commandName="login"
  														role="form"> 
 														<div class="form-group">
  															<form:input path="uname" type="text" name="uname" id="uname" tabindex="1" 
@@ -76,12 +76,12 @@
  																placeholder="Confirm Password" onblur="match()" required> 
  														</div> 
  														<div class="form-group"> 
- 															<form:input path="firstname" type="text" name="firstname" id="firstname" 
+ 															<form:input path="firstName" type="text" name="firstName" id="firstName" 
  																tabindex="4" class="form-control" 
  																placeholder="First Name" /> 
  														</div> 
  														<div class="form-group"> 
- 															<form:input path="lastname" type="text" name="lastname" id="lastname" 
+ 															<form:input path="lastName" type="text" name="lastName" id="lastName" 
  																tabindex="5" class="form-control" 
  																placeholder="Last Name" /> 
  														</div> 

@@ -22,7 +22,7 @@ public class RegisterBean {
 	
 	@NotEmpty
 	@Column(name = "LASTNAME", nullable = false)
-	private String lastname;
+	private String lastName;
 	
 	@NotEmpty
 	@Column(name = "USERID", nullable = false)
@@ -49,10 +49,10 @@ public class RegisterBean {
 		this.firstName = firstName;
 	}
 	public String getLastname() {
-		return lastname;
+		return lastName;
 	}
 	public void setLastname(String lastname) {
-		this.lastname = lastname;
+		this.lastName = lastname;
 	}
 	public long getPhone() {
 		return phone;
