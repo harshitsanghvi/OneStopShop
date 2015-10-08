@@ -1,17 +1,30 @@
 package com.onestopshop.beans;
 
 import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
+import javax.persistence.Transient;
 
-
+@Entity
+@Table(name = "ITEM")
 public class Item {
+
+	@Id @GeneratedValue
+	@Column(name="ID", nullable = false)
+	private Long id;
+	
 	@Column(name = "ITEMNAME")
 	private String title;
 	
+	@Transient
 	private Double shippingWeight;
 	
 	@Column(name = "ITEMDESC")
 	private String description;
 	
+	@Transient
 	private OrderDetail orderDetail;
 	
 	@Column(name = "ITEMPRICE")
@@ -20,6 +33,7 @@ public class Item {
 	@Column(name = "ITEMIMAGEPATH")
 	private String image;
 	
+	@Transient
 	private double weight;
 	
 	public double getShippingWeight() {
@@ -63,6 +77,21 @@ public class Item {
 	}
 	public void setImage(String image) {
 		this.image = image;
+	}
+	public double getPrice() {
+		return price;
+	}
+	public void setPrice(double price) {
+		this.price = price;
+	}
+	public void setWeight(double weight) {
+		this.weight = weight;
+	}
+	public Long getId() {
+		return id;
+	}
+	public void setId(Long id) {
+		this.id = id;
 	}
 	
 }
