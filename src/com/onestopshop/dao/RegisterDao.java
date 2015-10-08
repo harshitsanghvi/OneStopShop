@@ -4,6 +4,7 @@ package com.onestopshop.dao;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
+import org.hibernate.cfg.AnnotationConfiguration;
 import org.hibernate.cfg.Configuration;
 
 import com.onestopshop.beans.AddressBean;
@@ -16,7 +17,7 @@ public class RegisterDao {
 			LoginBean login) {
 
 		SessionFactory factory;
-		factory = new Configuration().configure().buildSessionFactory();
+		factory = new AnnotationConfiguration().configure().buildSessionFactory();
 		Session session = factory.openSession();
 		Transaction tx = null;
 		try {
