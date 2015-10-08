@@ -1,39 +1,45 @@
 package com.onestopshop.dao;
 
+
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.hibernate.cfg.Configuration;
 
+import com.onestopshop.beans.AddressBean;
 import com.onestopshop.beans.LoginBean;
 import com.onestopshop.beans.RegisterBean;
 
 public class RegisterDao {
 
-	public boolean registerUser(String uname, String password) {
+	public boolean registerUser(RegisterBean register, AddressBean address,
+			LoginBean login) {
 
 		SessionFactory factory;
 		factory = new Configuration().configure().buildSessionFactory();
 		Session session = factory.openSession();
 		Transaction tx = null;
 		try {
-			int id = 0;
 			tx = session.beginTransaction();
-			String USERLOGIN_QUERY = "insert into LoginBean VALUES(uname,password)";
-			Long user_id = (Long) session.save(USERLOGIN_QUERY);
+			Long userId = (Long) session.save(login);
 
-			String ADDRESS_QUERY = "insert into AddressBean  VALUES (addressLine1, addressLine2, city, state, country, zip)";
-			Long address_id = (Long) session.save(ADDRESS_QUERY);
+			Long addressId = (Long) session.save(address);
 
-			String USERPROFILE_QUERY = "insert into RegisterBean VALUES (firstName, lastName, userId, phone, addressId) ";
-			Long userprofile_id = (Long) session.save(USERPROFILE_QUERY);
-			
-			
+			register.setUserId(userId);
+			register.setAddressId(addressId);
+			Long userprofileId = (Long) session.save(register);
 
-			tx.commit();
-
+			if (userprofileId > 0) {
+				tx.commit();
+			}
+			return true;
 		} catch (Exception e) {
-
+			if(tx != null){
+				tx.rollback();
+			}
+			e.printStackTrace();
+		} finally{
+			session.close();
 		}
 		return false;
 	}
