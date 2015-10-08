@@ -1,10 +1,21 @@
 package com.onestopshop.beans;
 
 import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
 import org.hibernate.validator.constraints.NotEmpty;
 
+@Entity
+@Table(name = "ADDRESS")
 public class AddressBean {
+	
+	@Id @GeneratedValue
+	@Column(name="ID", nullable = false)
+	private Long id;
+	
 	@NotEmpty
 	@Column(name = "ADDRESSLINEONE", nullable = false)
 	private String addressLineOne;
@@ -28,11 +39,19 @@ public class AddressBean {
 	@Column(name = "ZIP", nullable = false)
 	private Integer zip;
 
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+	
 	public String getAddressLineOne() {
 		return addressLineOne;
 	}
-
-	public void setAddressLine1(String addressLineOne) {
+	public void setAddressLineOne(String addressLineOne) {
 		this.addressLineOne = addressLineOne;
 	}
 
