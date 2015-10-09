@@ -5,7 +5,7 @@ import com.onestopshop.dao.ItemDao;
 
 public class ItemModel {
 	
-	public Item getItem(String id, Item item){
+	public Item getItem(int id, Item item){
 		 ItemDao objItemDao = new ItemDao();
 		 return objItemDao.getItemInfo(id, item);
 	}

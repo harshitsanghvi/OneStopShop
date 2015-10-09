@@ -25,17 +25,18 @@ public class IndexDao {
 
 		try {
 			tx = session.beginTransaction();
-			String SQL_QUERY = "select title, description, price, image from Item";
+			String SQL_QUERY = "select id, title, description, price, image from Item";
 			Query query = session.createQuery(SQL_QUERY);
 
 			ArrayList<Item> items = new ArrayList<Item>();
 			for (Iterator iterator = query.iterate(); iterator.hasNext();) {
 				Object[] row = (Object[]) iterator.next();
 				Item item = new Item();
-				item.setTitle((String) row[0]);
-				item.setDescription((String) row[1]);
-				item.setPrice((int) row[2]);
-				item.setImage((String) row[3]);
+				item.setId((long) row[0]);
+				item.setTitle((String) row[1]);
+				item.setDescription((String) row[2]);
+				item.setPrice((int) row[3]);
+				item.setImage((String) row[4]);
 				items.add(item);
 			}
 			return items;

@@ -13,7 +13,7 @@ import com.onestopshop.beans.Item;
 
 public class ItemDao {
 
-	public Item getItemInfo(String id, Item Item) {
+	public Item getItemInfo(int id, Item Item) {
 
 		SessionFactory factory;
 		factory = new AnnotationConfiguration().configure().buildSessionFactory();
@@ -22,16 +22,14 @@ public class ItemDao {
 
 		try {
 			tx = session.beginTransaction();
-			int id = Integer.parseInt(id);
-			value = value.substring(0, value.length()-1);
-			String SQL_QUERY = "select title, description, price, image from Item where title='" + value + "'";
+			String SQL_QUERY = "select title, description, price, image from Item where id='" + id + "'";
 			Query query = session.createQuery(SQL_QUERY);
 
 			Item item = new Item();
 			for (Iterator iterator = query.iterate(); iterator.hasNext();) {
 				Object[] row = (Object[]) iterator.next();
 				System.out.println("db: " + row[0]);
-				System.out.println("parameter: " + value);
+				System.out.println("parameter: " + id);
 				item.setTitle((String) row[0]);
 				item.setDescription((String) row[1]);
 				item.setPrice((int) row[2]);
