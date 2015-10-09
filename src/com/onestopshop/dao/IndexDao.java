@@ -16,8 +16,7 @@ import com.onestopshop.beans.Item;
 
 public class IndexDao {
 
-
-	public boolean getInventory(ArrayList<Item> Items) {
+	public ArrayList<Item> getInventory(ArrayList<Item> Items) {
 
 		SessionFactory factory;
 		factory = new AnnotationConfiguration().configure().buildSessionFactory();
@@ -40,7 +39,8 @@ public class IndexDao {
 				items.add(item);
 				System.out.println((String) row[0]); 
 			}
-			return true;
+			System.out.println("In dao: " + items.size());
+			return items;
 		} catch (HibernateException e) {
 			if (tx != null) {
 				tx.rollback();
@@ -50,7 +50,7 @@ public class IndexDao {
 		} finally {
 			session.close();
 		}
-		return false;
+		return null;
 
 	}
 }
