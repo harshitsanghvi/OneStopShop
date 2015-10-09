@@ -20,8 +20,8 @@ pageEncoding="ISO-8859-1"%>
 					<tr>
 						<td><h2>${item.title}</h2></td>
 						<td><h4>${item.description}</h4></td>
-						<td><img id="image" src="${pageContext.request.contextPath}${item.image}" width="200"
-							height="200" alt="Product image" /></td>
+						<td><a href="item/${item.title}"><img id="image" src="${pageContext.request.contextPath}${item.image}" width="200"
+							height="200" alt="Product image" /></a></td>
 						<td><h4>Rs. ${item.price}</h4></td>
 						<td><input type="button" name="purchase" id="${item.title}PurchaseButton"
 							class="form-control btn btn-login" value="Add to Cart"></td>
