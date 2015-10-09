@@ -22,19 +22,20 @@ public class ItemDao {
 
 		try {
 			tx = session.beginTransaction();
-			String SQL_QUERY = "select title, description, price, image from Item where id='" + id + "'";
+			String SQL_QUERY = "select id, title, description, price, image from Item where id='" + id + "'";
 			Query query = session.createQuery(SQL_QUERY);
 
 			Item item = new Item();
 			for (Iterator iterator = query.iterate(); iterator.hasNext();) {
 				Object[] row = (Object[]) iterator.next();
-				System.out.println("db: " + row[0]);
-				System.out.println("parameter: " + id);
-				item.setTitle((String) row[0]);
-				item.setDescription((String) row[1]);
-				item.setPrice((int) row[2]);
-				item.setImage((String) row[3]);
+				item.setId((long) row[0]);
+				item.setTitle((String) row[1]);
+				item.setDescription((String) row[2]);
+				item.setPrice((int) row[3]);
+				item.setImage((String) row[4]);
 			}
+			System.out.println("db: " + item.getId());
+			System.out.println("parameter: " + id);
 			return item;
 		} catch (HibernateException e) {
 			if (tx != null) {
