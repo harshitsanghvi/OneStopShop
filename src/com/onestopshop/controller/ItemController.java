@@ -14,7 +14,8 @@ import com.onestopshop.model.ItemModel;
 public class ItemController {
 	
 	@RequestMapping(value = "/item/{itemid}", method = RequestMethod.GET)
-	public @ResponseBody String homePage(@PathVariable(value="itemid") String strId, Item item, ModelMap model) {
+	public @ResponseBody String itemPage(@PathVariable(value="itemid") String strId, Item item, ModelMap model) {
+		System.out.println("paramid: " + strId);
 		int id = Integer.parseInt(strId);
 		ItemModel objItemModel = new ItemModel();
 		if((item = objItemModel.getItem(id, item)) != null){

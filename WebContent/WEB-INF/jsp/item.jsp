@@ -9,6 +9,7 @@
 <body>
 				<li>
 					<tr>
+						<td>tacos</td>
 						<td><h2>${item.title}</h2></td>
 						<td><h4>${item.description}</h4></td>
 						<td><img id="image" src="${pageContext.request.contextPath}${item.image}" width="400"
