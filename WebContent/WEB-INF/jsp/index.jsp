@@ -14,17 +14,21 @@ pageEncoding="ISO-8859-1"%>
 <body>
 	Welcome!
 	<ul class="products">
-		<c:forEach items="${items}" var="item">
-			<li>
-				<h2>${item.title}</h2>
-				<h4>${item.description}</h4>
-				<img id="image" src="${pageContext.request.contextPath}${item.image}" width="200"
-					height="200" alt="Product image">
-				<h4>Rs. ${item.price}</h4>
-				<input type="button" name="purchase" id="${item.title}PurchaseButton"
-					class="form-control btn btn-login" value="Add to Cart">
-			</li>
-		</c:forEach>
+		<table>
+			<c:forEach items="${items}" var="item">
+				<li>
+					<tr>
+						<td><h2>${item.title}</h2></td>
+						<td><h4>${item.description}</h4></td>
+						<td><img id="image" src="${pageContext.request.contextPath}${item.image}" width="200"
+							height="200" alt="Product image" /></td>
+						<td><h4>Rs. ${item.price}</h4></td>
+						<td><input type="button" name="purchase" id="${item.title}PurchaseButton"
+							class="form-control btn btn-login" value="Add to Cart"></td>
+					</tr>
+				</li>
+			</c:forEach>
+		</table>
 	</ul>
 </body>
 </html>
