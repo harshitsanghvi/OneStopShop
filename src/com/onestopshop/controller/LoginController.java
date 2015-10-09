@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.onestopshop.beans.LoginBean;
+import com.onestopshop.beans.RegisterBean;
 import com.onestopshop.model.LoginModel;
 
 @Controller
@@ -33,7 +34,17 @@ public class LoginController {
 	}
 
 	@RequestMapping(value = "/login", method = RequestMethod.GET)
-	public ModelAndView RegisterPage() {
+	public ModelAndView loginRequest() {
 		return new ModelAndView("login", "login", new LoginBean());
+	}
+	
+	@RequestMapping(value = "/register", method = RequestMethod.GET)
+	public ModelAndView registerRequest() {
+		return new ModelAndView("register", "register", new RegisterBean());
+	}
+	
+	@RequestMapping(value = "/init", method = RequestMethod.GET)
+	public String initRequest() {
+		return "init";
 	}
 }
