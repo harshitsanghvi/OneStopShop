@@ -28,7 +28,7 @@ public class Item {
 	private OrderDetail orderDetail;
 	
 	@Column(name = "ITEMPRICE")
-	private double price;
+	private int price;
 	
 	@Column(name = "ITEMIMAGEPATH")
 	private String image;
@@ -78,10 +78,10 @@ public class Item {
 	public void setImage(String image) {
 		this.image = image;
 	}
-	public double getPrice() {
+	public int getPrice() {
 		return price;
 	}
-	public void setPrice(double price) {
+	public void setPrice(int price) {
 		this.price = price;
 	}
 	public void setWeight(double weight) {

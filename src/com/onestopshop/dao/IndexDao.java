@@ -34,12 +34,10 @@ public class IndexDao {
 				Item item = new Item();
 				item.setTitle((String) row[0]);
 				item.setDescription((String) row[1]);
-				item.setPrice((double) row[2]);
+				item.setPrice((int) row[2]);
 				item.setImage((String) row[3]);
 				items.add(item);
-				System.out.println((String) row[0]); 
 			}
-			System.out.println("In dao: " + items.size());
 			return items;
 		} catch (HibernateException e) {
 			if (tx != null) {
