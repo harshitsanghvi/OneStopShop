@@ -13,7 +13,7 @@ import com.onestopshop.beans.Item;
 
 public class ItemDao {
 
-	public Item getItemInfo(String value, Item Item) {
+	public Item getItemInfo(String id, Item Item) {
 
 		SessionFactory factory;
 		factory = new AnnotationConfiguration().configure().buildSessionFactory();
@@ -22,6 +22,7 @@ public class ItemDao {
 
 		try {
 			tx = session.beginTransaction();
+			int id = Integer.parseInt(id);
 			value = value.substring(0, value.length()-1);
 			String SQL_QUERY = "select title, description, price, image from Item where title='" + value + "'";
 			Query query = session.createQuery(SQL_QUERY);

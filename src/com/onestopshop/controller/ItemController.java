@@ -13,11 +13,13 @@ import com.onestopshop.model.ItemModel;
 @Controller
 public class ItemController {
 	
-	@RequestMapping(value = "/item/{itemname}", method = RequestMethod.GET)
-	public @ResponseBody String homePage(@PathVariable(value="itemname") String name, Item item, ModelMap model) {
+	@RequestMapping(value = "/item/{itemid}", method = RequestMethod.GET)
+	public @ResponseBody String homePage(@PathVariable(value="itemid") String strId, Item item, ModelMap model) {
+		int id = Integer.parseInt(strId);
 		ItemModel objItemModel = new ItemModel();
-		if((item = objItemModel.getItem(name, item)) != null){
+		if((item = objItemModel.getItem(id, item)) != null){
 			model.addAttribute("item", item);
+			System.out.println(item.getTitle());
 			return "item";
 		}
 		return "errors";
