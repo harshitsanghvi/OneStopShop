@@ -1,12 +1,8 @@
 package com.onestopshop.model;
 
-import java.util.ArrayList;
-import java.util.List;
-
-import com.onestopshop.beans.Item;
 
 public class Cart {
-	List<Item> itemList;
+	/*List<Item> itemList;
 	public Cart() {
 		itemList = new ArrayList<Item>();
 	}
@@ -19,8 +15,8 @@ public class Cart {
 	
 	public void addItem(Item item){
 		this.itemList.add(item);
-	}
-	/*private int id;
+	}*/
+	private int id;
 	private String name;
 	private float price;
 	private int quantity;
@@ -48,6 +44,6 @@ public class Cart {
 	public void setQuantity(int quantity) {
 		this.quantity = quantity;
 	}
-	*/
+	
 	
 }

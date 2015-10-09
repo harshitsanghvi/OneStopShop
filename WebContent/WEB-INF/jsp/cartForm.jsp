@@ -9,7 +9,7 @@
 </head>
 <body>
 
-	<form:form modelAttribute="cart" action="addCart.htm" method="POST">
+	<form:form modelAttribute="cart" action="/OneStopShop/cart/addCart" method="POST">
 	<%-- ShippingWeight: <form:label path="shippingWeight"/><br/>
 	Description: <form:label path="description"/><br/>
 	OrderDetail: <form:label path="orderDetail"/><br/>
@@ -19,10 +19,10 @@
 	Name: <form:input path="name"/><br/>	 
 	Price: <form:input path="price"/><br/>	 
 	Quantity: <form:input path="quantity"/><br/>	 
-	</form:form>
+	
 	
 	<input type="submit" value="Add TO Cart"/>
 
-
+</form:form>
 </body>
 </html>

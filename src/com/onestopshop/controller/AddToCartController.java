@@ -12,17 +12,16 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import com.onestopshop.beans.Item;
 import com.onestopshop.model.Cart;
 
 @Controller
-@RequestMapping(value="/cart")
+@RequestMapping("/cart")
 public class AddToCartController {
 	
-	@RequestMapping(value="/form")
+	@RequestMapping(value="/form",method=RequestMethod.GET)
 	public String index(ModelMap model){
 		
-		model.put("cart",new Item());
+		model.put("cart",new Cart());
 		return "cartForm";
 	}
 
@@ -31,17 +30,19 @@ public class AddToCartController {
 	@RequestMapping(value="/addCart", method= RequestMethod.POST)
 	public String addCart(@ModelAttribute("cart") Cart cart, HttpSession session){
 		List<Cart> list = (List<Cart>) session.getAttribute("cart");
+		System.out.println("sdsd");
 		if(list==null){
 			list=new ArrayList<>();
 			list.add(cart);
+			System.out.println();
 			}
 		else{
 			boolean flag = false;
 			for(Cart cart1:list){
 				//Handling duplicate items and increasing the quantity in  cart
-				if(cart1.getItemList()== cart.getItemList()){
+				if(cart1.getId()== cart.getId()){
 					
-				//	cart1.setQuantity(cart1.getQuantity()+1);
+					cart1.setQuantity(cart1.getQuantity()+1);
 					
 					flag=true;
 					break;
@@ -61,7 +62,7 @@ public class AddToCartController {
 		float total=0;
 		for (Cart cart:list ){
 			//handling total amount of item in cart
-//			total+=(cart.getQuantity()+cart.getPrice());  // if we fetch quantity from bean
+		total+=(cart.getQuantity()+cart.getPrice());  // if we fetch quantity from bean
 		}
 		return total;
 	}
@@ -69,10 +70,13 @@ public class AddToCartController {
 	public String remove(@RequestParam(value="id") int id,HttpSession session ){
 		List<Cart> list = (List<Cart>) session.getAttribute("cart");
 		if(list!=null)
-		{for(Cart cart:list){
-			if(cart.getId()==id){
-				list.remove(cart);
-				break;
+		{
+			for(Cart cart:list){
+				if(cart.getId()==id)
+				{
+					list.remove(cart);
+					break;
+				}
 			}
 		}
 		session.setAttribute("cart", list);
@@ -80,6 +84,7 @@ public class AddToCartController {
 
 		return "cart";
 	}
+	
 
 }
-}
+
