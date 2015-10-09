@@ -5,7 +5,6 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.hibernate.cfg.AnnotationConfiguration;
-import org.hibernate.cfg.Configuration;
 
 import com.onestopshop.beans.AddressBean;
 import com.onestopshop.beans.LoginBean;
@@ -22,10 +21,14 @@ public class RegisterDao {
 		Transaction tx = null;
 		try {
 			tx = session.beginTransaction();
-			Long userId = (Long) session.save(login);
-
-			Long addressId = (Long) session.save(address);
+			session.save(login);
+			Long userId = login.getId(); 
+					
+			session.save(address);
+			Long addressId = address.getId();
+			
 			System.out.println(userId+addressId);
+			
 			register.setUserId(userId);
 			register.setAddressId(addressId);
 			Long userprofileId = (Long) session.save(register);
