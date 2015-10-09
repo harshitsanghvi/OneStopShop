@@ -6,7 +6,6 @@
 	<div class="form-group">
 		<form:input path="uname" type="text" name="uname" id="uname"
 			tabindex="1" class="form-control" placeholder="Username" />
-		<!-- 															find way to add "required" tag later  -->
 	</div>
 	<div class="form-group">
 		<form:input path="password" type="password" name="password"
