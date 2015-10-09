@@ -1,5 +1,6 @@
 @CHARSET "ISO-8859-1";
 ul.products li {
+	height: 500px;
     width: 200px;
     display: inline-block;
     vertical-align: top;

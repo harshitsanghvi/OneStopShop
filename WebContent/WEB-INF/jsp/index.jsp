@@ -18,9 +18,9 @@ pageEncoding="ISO-8859-1"%>
 			<li>
 				<h2>${item.title}</h2>
 				<h4>${item.description}</h4>
-				<img id="image" src="${item.image}" width="200"
+				<img id="image" src="${pageContext.request.contextPath}${item.image}" width="200"
 					height="200" alt="Product image">
-				<h4>$${item.price}</h4>
+				<h4>Rs. ${item.price}</h4>
 				<input type="button" name="purchase" id="${item.title}PurchaseButton"
 					class="form-control btn btn-login" value="Add to Cart">
 			</li>
