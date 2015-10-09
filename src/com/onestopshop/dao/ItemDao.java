@@ -34,8 +34,6 @@ public class ItemDao {
 				item.setPrice((int) row[3]);
 				item.setImage((String) row[4]);
 			}
-			System.out.println("db: " + item.getId());
-			System.out.println("parameter: " + id);
 			return item;
 		} catch (HibernateException e) {
 			if (tx != null) {

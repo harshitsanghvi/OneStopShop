@@ -14,13 +14,11 @@ import com.onestopshop.model.ItemModel;
 public class ItemController {
 	
 	@RequestMapping(value = "/item/{itemid}", method = RequestMethod.GET)
-	public @ResponseBody String itemPage(@PathVariable(value="itemid") String strId, Item item, ModelMap model) {
-		System.out.println("paramid: " + strId);
+	public String itemPage(@PathVariable(value="itemid") String strId, Item item, ModelMap model) {
 		int id = Integer.parseInt(strId);
 		ItemModel objItemModel = new ItemModel();
 		if((item = objItemModel.getItem(id, item)) != null){
 			model.addAttribute("item", item);
-			System.out.println(item.getTitle());
 			return "item";
 		}
 		return "errors";
