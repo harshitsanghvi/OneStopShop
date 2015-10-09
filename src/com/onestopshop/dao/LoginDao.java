@@ -7,6 +7,7 @@ import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
+import org.hibernate.cfg.AnnotationConfiguration;
 import org.hibernate.cfg.Configuration;
 
 import com.onestopshop.beans.LoginBean;
@@ -17,7 +18,7 @@ public class LoginDao {
 	SessionFactory factory;
 
 	public boolean checkLogin(LoginBean login) {
-		factory = new Configuration().configure().buildSessionFactory();
+		factory = new AnnotationConfiguration().configure().buildSessionFactory();
 		Session session = factory.openSession();
 		Transaction tx = null;
 
