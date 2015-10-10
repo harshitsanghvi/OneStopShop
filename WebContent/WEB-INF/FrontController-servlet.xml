@@ -14,7 +14,13 @@
 	<context:component-scan base-package="com.onestopshop.controller" />
 
 	<mvc:annotation-driven />
-
+	
+    <mvc:resources mapping="/images/404/*" location="/images/404/" />
+    <mvc:resources mapping="/images/blog/*" location="/images/blog/"/>
+    <mvc:resources mapping="/images/home/*" location="/images/home/" />
+    <mvc:resources mapping="/images/cart/*" location="/images/cart" />
+    <mvc:resources mapping="/images/product-details/*" location="/images/product-details" />
+    <mvc:resources mapping="/images/shop/*" location="/images/shop" />
 	<mvc:resources mapping="/img/*" location="/img/" />
 	<mvc:resources mapping="/css/*" location="/css/" />
 	<mvc:resources mapping="/fonts/*" location="/fonts/" />

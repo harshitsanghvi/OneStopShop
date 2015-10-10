@@ -59,7 +59,7 @@ pageEncoding="ISO-8859-1"%>
 				<div class="row">
 					<div class="col-sm-4">
 						<div class="logo pull-left">
-							<a href="index.html"><img src="images/home/logo.png" alt="" /></a>
+							<a href="index.html"><img src="/OneStopShop/images/home/logo.png" alt="" /></a>
 						</div>
 						<div class="btn-group pull-right">
 							<div class="btn-group">
@@ -282,7 +282,7 @@ pageEncoding="ISO-8859-1"%>
 						</div><!--/price-range-->
 						
 						<div class="shipping text-center"><!--shipping-->
-							<img src="images/home/shipping.jpg" alt="" />
+							<img src="/OneStopShop/images/home/shipping.jpg" alt="" />
 						</div><!--/shipping-->
 						
 					</div>
@@ -366,7 +366,7 @@ pageEncoding="ISO-8859-1"%>
 									<div class="product-image-wrapper">
 										<div class="single-products">
 											<div class="productinfo text-center">
-												<img src="images/home/gallery1.jpg" alt="" />
+												<img src="/OneStopShop/images/home/gallery1.jpg" alt="" />
 												<h2>$56</h2>
 												<p>Easy Polo Black Edition</p>
 												<button type="button" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</button>
@@ -378,7 +378,7 @@ pageEncoding="ISO-8859-1"%>
 									<div class="product-image-wrapper">
 										<div class="single-products">
 											<div class="productinfo text-center">
-												<img src="images/home/gallery2.jpg" alt="" />
+												<img src="/OneStopShop/images/home/gallery2.jpg" alt="" />
 												<h2>$56</h2>
 												<p>Easy Polo Black Edition</p>
 												<button type="button" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</button>
@@ -390,7 +390,7 @@ pageEncoding="ISO-8859-1"%>
 									<div class="product-image-wrapper">
 										<div class="single-products">
 											<div class="productinfo text-center">
-												<img src="images/home/gallery3.jpg" alt="" />
+												<img src="/OneStopShop/images/home/gallery3.jpg" alt="" />
 												<h2>$56</h2>
 												<p>Easy Polo Black Edition</p>
 												<button type="button" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</button>
@@ -402,7 +402,7 @@ pageEncoding="ISO-8859-1"%>
 									<div class="product-image-wrapper">
 										<div class="single-products">
 											<div class="productinfo text-center">
-												<img src="images/home/gallery4.jpg" alt="" />
+												<img src="/OneStopShop/images/home/gallery4.jpg" alt="" />
 												<h2>$56</h2>
 												<p>Easy Polo Black Edition</p>
 												<button type="button" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</button>
@@ -417,7 +417,7 @@ pageEncoding="ISO-8859-1"%>
 									<div class="product-image-wrapper">
 										<div class="single-products">
 											<div class="productinfo text-center">
-												<img src="images/home/gallery1.jpg" alt="" />
+												<img src="/OneStopShop/images/home/gallery1.jpg" alt="" />
 												<h2>$56</h2>
 												<p>Easy Polo Black Edition</p>
 												<button type="button" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</button>
@@ -429,7 +429,7 @@ pageEncoding="ISO-8859-1"%>
 									<div class="product-image-wrapper">
 										<div class="single-products">
 											<div class="productinfo text-center">
-												<img src="images/home/gallery3.jpg" alt="" />
+												<img src="/OneStopShop/images/home/gallery3.jpg" alt="" />
 												<h2>$56</h2>
 												<p>Easy Polo Black Edition</p>
 												<button type="button" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</button>
@@ -441,7 +441,7 @@ pageEncoding="ISO-8859-1"%>
 									<div class="product-image-wrapper">
 										<div class="single-products">
 											<div class="productinfo text-center">
-												<img src="images/home/gallery2.jpg" alt="" />
+												<img src="/OneStopShop/images/home/gallery2.jpg" alt="" />
 												<h2>$56</h2>
 												<p>Easy Polo Black Edition</p>
 												<button type="button" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</button>
@@ -453,7 +453,7 @@ pageEncoding="ISO-8859-1"%>
 									<div class="product-image-wrapper">
 										<div class="single-products">
 											<div class="productinfo text-center">
-												<img src="images/home/gallery4.jpg" alt="" />
+												<img src="/OneStopShop/images/home/gallery4.jpg" alt="" />
 												<h2>$56</h2>
 												<p>Easy Polo Black Edition</p>
 												<button type="button" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</button>
@@ -468,7 +468,7 @@ pageEncoding="ISO-8859-1"%>
 									<div class="product-image-wrapper">
 										<div class="single-products">
 											<div class="productinfo text-center">
-												<img src="images/home/gallery1.jpg" alt="" />
+												<img src="/OneStopShop/images/home/gallery1.jpg" alt="" />
 												<h2>$56</h2>
 												<p>Easy Polo Black Edition</p>
 												<button type="button" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</button>
@@ -480,7 +480,7 @@ pageEncoding="ISO-8859-1"%>
 									<div class="product-image-wrapper">
 										<div class="single-products">
 											<div class="productinfo text-center">
-												<img src="images/home/gallery2.jpg" alt="" />
+												<img src="/OneStopShop/images/home/gallery2.jpg" alt="" />
 												<h2>$56</h2>
 												<p>Easy Polo Black Edition</p>
 												<button type="button" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</button>
@@ -492,7 +492,7 @@ pageEncoding="ISO-8859-1"%>
 									<div class="product-image-wrapper">
 										<div class="single-products">
 											<div class="productinfo text-center">
-												<img src="images/home/gallery3.jpg" alt="" />
+												<img src="/OneStopShop/images/home/gallery3.jpg" alt="" />
 												<h2>$56</h2>
 												<p>Easy Polo Black Edition</p>
 												<button type="button" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</button>
@@ -504,7 +504,7 @@ pageEncoding="ISO-8859-1"%>
 									<div class="product-image-wrapper">
 										<div class="single-products">
 											<div class="productinfo text-center">
-												<img src="images/home/gallery4.jpg" alt="" />
+												<img src="/OneStopShop/images/home/gallery4.jpg" alt="" />
 												<h2>$56</h2>
 												<p>Easy Polo Black Edition</p>
 												<button type="button" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</button>
@@ -551,7 +551,7 @@ pageEncoding="ISO-8859-1"%>
 										<div class="product-image-wrapper">
 											<div class="single-products">
 												<div class="productinfo text-center">
-													<img src="images/home/recommend1.jpg" alt="" />
+													<img src="/OneStopShop/images/home/recommend1.jpg" alt="" />
 													<h2>$56</h2>
 													<p>Easy Polo Black Edition</p>
 													<button type="button" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</button>
@@ -563,7 +563,7 @@ pageEncoding="ISO-8859-1"%>
 										<div class="product-image-wrapper">
 											<div class="single-products">
 												<div class="productinfo text-center">
-													<img src="images/home/recommend2.jpg" alt="" />
+													<img src="/OneStopShop/images/home/recommend2.jpg" alt="" />
 													<h2>$56</h2>
 													<p>Easy Polo Black Edition</p>
 													<button type="button" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</button>
@@ -575,7 +575,7 @@ pageEncoding="ISO-8859-1"%>
 										<div class="product-image-wrapper">
 											<div class="single-products">
 												<div class="productinfo text-center">
-													<img src="images/home/recommend3.jpg" alt="" />
+													<img src="/OneStopShop/images/home/recommend3.jpg" alt="" />
 													<h2>$56</h2>
 													<p>Easy Polo Black Edition</p>
 													<button type="button" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</button>
@@ -589,7 +589,7 @@ pageEncoding="ISO-8859-1"%>
 										<div class="product-image-wrapper">
 											<div class="single-products">
 												<div class="productinfo text-center">
-													<img src="images/home/recommend1.jpg" alt="" />
+													<img src="/OneStopShop/images/home/recommend1.jpg" alt="" />
 													<h2>$56</h2>
 													<p>Easy Polo Black Edition</p>
 													<button type="button" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</button>
@@ -601,7 +601,7 @@ pageEncoding="ISO-8859-1"%>
 										<div class="product-image-wrapper">
 											<div class="single-products">
 												<div class="productinfo text-center">
-													<img src="images/home/recommend2.jpg" alt="" />
+													<img src="/OneStopShop/images/home/recommend2.jpg" alt="" />
 													<h2>$56</h2>
 													<p>Easy Polo Black Edition</p>
 													<button type="button" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</button>
@@ -613,7 +613,7 @@ pageEncoding="ISO-8859-1"%>
 										<div class="product-image-wrapper">
 											<div class="single-products">
 												<div class="productinfo text-center">
-													<img src="images/home/recommend3.jpg" alt="" />
+													<img src="/OneStopShop/images/home/recommend3.jpg" alt="" />
 													<h2>$56</h2>
 													<p>Easy Polo Black Edition</p>
 													<button type="button" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</button>
@@ -652,7 +652,7 @@ pageEncoding="ISO-8859-1"%>
 							<div class="video-gallery text-center">
 								<a href="#">
 									<div class="iframe-img">
-										<img src="images/home/iframe1.png" alt="" />
+										<img src="/OneStopShop/images/home/iframe1.png" alt="" />
 									</div>
 									<div class="overlay-icon">
 										<i class="fa fa-play-circle-o"></i>
@@ -667,7 +667,7 @@ pageEncoding="ISO-8859-1"%>
 							<div class="video-gallery text-center">
 								<a href="#">
 									<div class="iframe-img">
-										<img src="images/home/iframe2.png" alt="" />
+										<img src="/OneStopShop/images/home/iframe2.png" alt="" />
 									</div>
 									<div class="overlay-icon">
 										<i class="fa fa-play-circle-o"></i>
@@ -682,7 +682,7 @@ pageEncoding="ISO-8859-1"%>
 							<div class="video-gallery text-center">
 								<a href="#">
 									<div class="iframe-img">
-										<img src="images/home/iframe3.png" alt="" />
+										<img src="/OneStopShop/images/home/iframe3.png" alt="" />
 									</div>
 									<div class="overlay-icon">
 										<i class="fa fa-play-circle-o"></i>
@@ -697,7 +697,7 @@ pageEncoding="ISO-8859-1"%>
 							<div class="video-gallery text-center">
 								<a href="#">
 									<div class="iframe-img">
-										<img src="images/home/iframe4.png" alt="" />
+										<img src="/OneStopShop/images/home/iframe4.png" alt="" />
 									</div>
 									<div class="overlay-icon">
 										<i class="fa fa-play-circle-o"></i>
@@ -710,7 +710,7 @@ pageEncoding="ISO-8859-1"%>
 					</div>
 					<div class="col-sm-3">
 						<div class="address">
-							<img src="images/home/map.png" alt="" />
+							<img src="/OneStopShop/images/home/map.png" alt="" />
 							<p>505 S Atlantic Ave Virginia Beach, VA(Virginia)</p>
 						</div>
 					</div>
