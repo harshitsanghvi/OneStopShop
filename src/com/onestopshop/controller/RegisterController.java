@@ -31,6 +31,6 @@ public class RegisterController {
 	public ModelAndView RegisterPage() {
 		
 		return new ModelAndView("register", "register", new RegisterBean());
-	}*/
-
+	}
+*/
 }

@@ -9,13 +9,13 @@
 <meta name="description" content="">
 <meta name="author" content="">
 <title>Home | E-Shopper</title>
-<link href="css/bootstrap.min.css" rel="stylesheet">
-<link href="css/font-awesome.min.css" rel="stylesheet">
-<link href="css/prettyPhoto.css" rel="stylesheet">
-<link href="css/price-range.css" rel="stylesheet">
-<link href="css/animate.css" rel="stylesheet">
-<link href="css/main.css" rel="stylesheet">
-<link href="css/responsive.css" rel="stylesheet">
+<link href="/OneStopShop/css/bootstrap.min.css" rel="stylesheet">
+<link href="/OneStopShop/css/font-awesome.min.css" rel="stylesheet">
+<link href="/OneStopShop/css/prettyPhoto.css" rel="stylesheet">
+<link href="/OneStopShop/css/price-range.css" rel="stylesheet">
+<link href="/OneStopShop/css/animate.css" rel="stylesheet">
+<link href="/OneStopShop/css/main.css" rel="stylesheet">
+<link href="/OneStopShop/css/responsive.css" rel="stylesheet">
 <!--[if lt IE 9]>
     <script src="js/html5shiv.js"></script>
     <script src="js/respond.min.js"></script>
@@ -117,13 +117,13 @@
 					<div class="col-sm-8">
 						<div class="shop-menu pull-right">
 							<ul class="nav navbar-nav">
-								<li><a href="#"><i class="fa fa-user"></i> Account</a></li>
+								<li><a href="/OneStopShop/register"><i class="fa fa-user"></i> Account</a></li>
 								<li><a href="#"><i class="fa fa-star"></i> Wishlist</a></li>
 								<li><a href="checkout.html"><i class="fa fa-crosshairs"></i>
 										Checkout</a></li>
 								<li><a href="/OneStopShop/cart/viewcart"><i class="fa fa-shopping-cart"></i>
 										Cart</a></li>
-								<li><a href="login.html"><i class="fa fa-lock"></i>
+								<li><a href="login"><i class="fa fa-lock"></i>
 										Login</a></li>
 							</ul>
 						</div>
@@ -156,7 +156,7 @@
 										<li><a href="product-details.html">Product Details</a></li>
 										<li><a href="checkout.html">Checkout</a></li>
 										<li><a href="cart/viewcart">Cart</a></li>
-										<li><a href="login.html">Login</a></li>
+										<li><a href="/OneStopShop/login">Login</a></li>
 									</ul></li>
 								<li class="dropdown"><a href="#">Blog<i
 										class="fa fa-angle-down"></i></a>
@@ -164,8 +164,8 @@
 										<li><a href="blog.html">Blog List</a></li>
 										<li><a href="blog-single.html">Blog Single</a></li>
 									</ul></li>
-								<li><a href="/OneStopShop/jsp/404.jsp">404</a></li>
-								<li><a href="contact-us.html">Contact</a></li>
+								<li><a href="/OneStopShop/js/404.jsp">404</a></li>
+								<li><a href="/OneStopShop/js/contact-us.html">Contact</a></li>
 							</ul>
 						</div>
 					</div>
@@ -201,12 +201,12 @@
 									<h1>
 										<span>E</span>-SHOPPER
 									</h1>
-									<h2>Free E-Commerce Template</h2>
+									<!-- <h2>Free E-Commerce Template</h2>
 									<p>Lorem ipsum dolor sit amet, consectetur adipisicing
 										elit, sed do eiusmod tempor incididunt ut labore et dolore
 										magna aliqua.</p>
 									<button type="button" class="btn btn-default get">Get
-										it now</button>
+										it now</button> -->
 								</div>
 								<div class="col-sm-6">
 									<img src="/OneStopShop/images/home/girl1.jpg" class="girl img-responsive"
@@ -219,12 +219,12 @@
 									<h1>
 										<span>E</span>-SHOPPER
 									</h1>
-									<h2>100% Responsive Design</h2>
+									<!-- <h2>100% Responsive Design</h2>
 									<p>Lorem ipsum dolor sit amet, consectetur adipisicing
 										elit, sed do eiusmod tempor incididunt ut labore et dolore
 										magna aliqua.</p>
 									<button type="button" class="btn btn-default get">Get
-										it now</button>
+										it now</button -->
 								</div>
 								<div class="col-sm-6">
 									<img src="/OneStopShop/images/home/girl2.jpg" class="girl img-responsive"
@@ -238,12 +238,12 @@
 									<h1>
 										<span>E</span>-SHOPPER
 									</h1>
-									<h2>Free Ecommerce Template</h2>
+									<!-- <h2>Free Ecommerce Template</h2>
 									<p>Lorem ipsum dolor sit amet, consectetur adipisicing
 										elit, sed do eiusmod tempor incididunt ut labore et dolore
 										magna aliqua.</p>
 									<button type="button" class="btn btn-default get">Get
-										it now</button>
+										it now</button> -->
 								</div>
 								<div class="col-sm-6">
 									<img src="/OneStopShop/images/home/girl3.jpg" class="girl img-responsive"
@@ -276,7 +276,7 @@
 						<h2>Category</h2>
 						<div class="panel-group category-products" id="accordian">
 							<!--category-productsr-->
-							<div class="panel panel-default">
+							<!-- <div class="panel panel-default">
 								<div class="panel-heading">
 									<h4 class="panel-title">
 										<a data-toggle="collapse" data-parent="#accordian"
@@ -323,7 +323,7 @@
 									</div>
 								</div>
 							</div>
-
+ -->
 							<div class="panel panel-default">
 								<div class="panel-heading">
 									<h4 class="panel-title">
@@ -397,8 +397,8 @@
 						</div>
 						<!--/category-products-->
 
-						<div class="brands_products">
-							<!--brands_products-->
+						<!-- <div class="brands_products">
+							brands_products
 							<h2>Brands</h2>
 							<div class="brands-name">
 								<ul class="nav nav-pills nav-stacked">
@@ -421,7 +421,7 @@
 								</ul>
 							</div>
 						</div>
-						<!--/brands_products-->
+						/brands_products -->
 
 						<div class="price-range">
 							<!--price-range-->
@@ -488,8 +488,8 @@
 					</div>
 					<!--features_items-->
 
-					<div class="category-tab">
-						<!--category-tab-->
+					<!-- <div class="category-tab">
+						category-tab
 						<div class="col-sm-12">
 							<ul class="nav nav-tabs">
 								<li class="active"><a href="#tshirt" data-toggle="tab">T-Shirt</a></li>
@@ -498,7 +498,7 @@
 								<li><a href="#kids" data-toggle="tab">Kids</a></li>
 								<li><a href="#poloshirt" data-toggle="tab">Polo shirt</a></li>
 							</ul>
-						</div>
+						</div> -->
 						<div class="tab-content">
 							<div class="tab-pane fade active in" id="tshirt">
 								<div class="col-sm-3">
@@ -929,7 +929,7 @@
 							<div class="video-gallery text-center">
 								<a href="#">
 									<div class="iframe-img">
-										<img src="images/home/iframe1.png" alt="" />
+										<img src="/OneStopShop/images/home/iframe1.png" alt="" />
 									</div>
 									<div class="overlay-icon">
 										<i class="fa fa-play-circle-o"></i>
@@ -1011,7 +1011,7 @@
 						</div>
 					</div>
 					<div class="col-sm-2">
-						<div class="single-widget">
+						<!-- <div class="single-widget">
 							<h2>Quock Shop</h2>
 							<ul class="nav nav-pills nav-stacked">
 								<li><a href="#">T-Shirt</a></li>
@@ -1020,7 +1020,7 @@
 								<li><a href="#">Gift Cards</a></li>
 								<li><a href="#">Shoes</a></li>
 							</ul>
-						</div>
+						</div> -->
 					</div>
 					<div class="col-sm-2">
 						<div class="single-widget">

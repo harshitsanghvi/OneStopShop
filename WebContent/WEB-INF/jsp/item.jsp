@@ -298,7 +298,7 @@ pageEncoding="ISO-8859-1"%>
 							<div id="similar-product" class="carousel slide" data-ride="carousel">
 								
 								  <!-- Wrapper for slides -->
-								    <div class="carousel-inner">
+								    <%-- <div class="carousel-inner">
 										<div class="item active">
 										  <a href=""><img src="${pageContext.request.contextPath}/images/product-details/similar1.jpg" alt=""></a>
 										  <a href=""><img src="${pageContext.request.contextPath}/images/product-details/similar2.jpg" alt=""></a>
@@ -315,7 +315,7 @@ pageEncoding="ISO-8859-1"%>
 										  <a href=""><img src="${pageContext.request.contextPath}/images/product-details/similar3.jpg" alt=""></a>
 										</div>
 										
-									</div>
+									</div> --%>
 
 								  <!-- Controls -->
 								  <a class="left item-control" href="#similar-product" data-slide="prev">
@@ -329,11 +329,11 @@ pageEncoding="ISO-8859-1"%>
 						</div>
 						<div class="col-sm-7">
 							<div class="product-information"><!--/product-information-->
-								<img src="${pageContext.request.contextPath}/images/product-details/new.jpg" class="newarrival" alt="" />
+								<%-- <img src="${pageContext.request.contextPath}/images/product-details/new.jpg" class="newarrival" alt="" /> --%>
 								<h2>${item.title}</h2>
 								<p>Web ID: ${item.id}</p>
 								
-								<img src="${pageContext.request.contextPath}/images/product-details/rating.png" alt="" />
+								<%-- <img src="${pageContext.request.contextPath}/images/product-details/rating.png" alt="" /> --%>
 								<span>
 									<span>Rs. ${item.price}</span>
 									<label>Quantity:</label>
@@ -346,7 +346,7 @@ pageEncoding="ISO-8859-1"%>
 								<p><b>Availability:</b> In Stock</p>
 								<p><b>Condition:</b> New</p>
 								<p><b>Brand:</b> E-SHOPPER</p>
-								<a href=""><img src="${pageContext.request.contextPath}/images/product-details/share.png" class="share img-responsive"  alt="" /></a>
+								<%-- <a href=""><img src="${pageContext.request.contextPath}/images/product-details/share.png" class="share img-responsive"  alt="" /></a> --%>
 							</div><!--/product-information-->
 						</div>
 					</div><!--/product-details-->
@@ -530,7 +530,7 @@ pageEncoding="ISO-8859-1"%>
 											<input type="email" placeholder="Email Address"/>
 										</span>
 										<textarea name="" ></textarea>
-										<b>Rating: </b> <img src="${pageContext.request.contextPath}/images/product-details/rating.png" alt="" />
+										<%-- <b>Rating: </b> <img src="${pageContext.request.contextPath}/images/product-details/rating.png" alt="" /> --%>
 										<button type="button" class="btn btn-default pull-right">
 											Submit
 										</button>
