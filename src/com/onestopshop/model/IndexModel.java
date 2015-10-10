@@ -12,5 +12,7 @@ public class IndexModel {
 		IndexDao objIndexDao = new IndexDao();
 		 return objIndexDao.getInventory(items);
 	}
+	
+	
 
 }

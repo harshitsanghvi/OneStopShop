@@ -9,7 +9,7 @@
 </head>
 <body>
 
-	<form:form modelAttribute="cart" action="/OneStopShop/cart/addCart" method="POST">
+	<form:form modelAttribute="cart" commandName="cart" action="/OneStopShop/cart/addCart" method="POST">
 	<%-- ShippingWeight: <form:label path="shippingWeight"/><br/>
 	Description: <form:label path="description"/><br/>
 	OrderDetail: <form:label path="orderDetail"/><br/>

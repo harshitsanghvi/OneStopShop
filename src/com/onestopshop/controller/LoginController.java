@@ -1,6 +1,7 @@
 package com.onestopshop.controller;
 
-import javax.validation.Valid;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
@@ -10,13 +11,14 @@ import org.springframework.web.servlet.ModelAndView;
 
 import com.onestopshop.beans.LoginBean;
 import com.onestopshop.beans.RegisterBean;
+import com.onestopshop.model.Cart;
 import com.onestopshop.model.LoginModel;
 
 @Controller
 public class LoginController {
 
 	@RequestMapping(value = "/verify", method = RequestMethod.POST)
-	public String loginPage( LoginBean login, BindingResult result) {
+	public String loginPage( LoginBean login, BindingResult result, HttpServletRequest request) {
 
 		if (result.hasErrors()) {
 			return "errors";
@@ -27,6 +29,11 @@ public class LoginController {
 		System.out.println(uname + password);
 		if (uname != null && password != null) {
 			if (objLoginModel.validateUser(login)) {
+				
+				HttpSession session = request.getSession();
+				Cart cart = new Cart();
+				session.setAttribute("cartList", cart);
+				
 				return "index";
 			}
 		}

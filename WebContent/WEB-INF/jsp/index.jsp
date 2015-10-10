@@ -20,6 +20,21 @@
     <script src="js/html5shiv.js"></script>
     <script src="js/respond.min.js"></script>
     <![endif]-->
+    
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script type="text/javascript">
+	function addtest(objectName){
+	$.ajax({
+ 	    url: 'cart/AddCart',
+ 	    type: 'GET',
+ 	    data: {item : objectName},
+ 	    success: function(response){
+ 	    	alert(objectName+" added to cart");
+ 	    }
+ 	});
+}
+</script>
+    
 <link rel="shortcut icon" href="images/ico/favicon.ico">
 <link rel="apple-touch-icon-precomposed" sizes="144x144"
 	href="images/ico/apple-touch-icon-144-precomposed.png">
@@ -140,7 +155,7 @@
 										<li><a href="shop.html">Products</a></li>
 										<li><a href="product-details.html">Product Details</a></li>
 										<li><a href="checkout.html">Checkout</a></li>
-										<li><a href="cart.html">Cart</a></li>
+										<li><a href="cart/viewcart">Cart</a></li>
 										<li><a href="login.html">Login</a></li>
 									</ul></li>
 								<li class="dropdown"><a href="#">Blog<i
@@ -453,14 +468,14 @@
 													alt="Product image" /></a>
 												<h2>Rs. ${item.price}</h2>
 												<p>${item.title}</p>
-												<a href="#" class="btn btn-default add-to-cart"><i
+												<a href="#" class="btn btn-default add-to-cart" onclick="addtest('${item.id}');return false;" value="${item.id}"><i
 													class="fa fa-shopping-cart"></i>Add to cart</a>
 											</div>
 										</div>
 									</div>
 									<div class="choose">
 										<ul class="nav nav-pills nav-justified">
-											<li><a href="#"><i class="fa fa-plus-square"></i>Add
+											<li><a href="#" onclick="addtest('${item.id}');return false;" value="${item.id}"><i class="fa fa-plus-square"></i>Add
 													to wishlist</a></li>
 											<li><a href="#"><i class="fa fa-plus-square"></i>Add
 													to compare</a></li>

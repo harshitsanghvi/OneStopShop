@@ -12,22 +12,22 @@
 	
 	
 	<table cellpadding="10px" border="1" style="border-collapse: collapse">
-	<c:forEach items="${sessionScope[cart]}" var="c">
+	<c:forEach items="${sessionScope[cartList]}" var="c">
 		<tr>
-		<%-- <td>${c.id}</td>
+		<td>${c.id}</td>
 		<td>${c.title}</td>
 		<td>${c.description}</td>
 		<td>${c.price}</td>
 		<td>${c.image}</td>
 		<td>${c.orderDetail}</td>
-		<td>${c.weight}</td> --%>
-		<td>${c.id}</td>
+		<td>${c.weight}</td> 
+		<%-- <td>${c.id}</td>
 		<td>${c.name}</td>
 		<td>${c.price}</td>
-		<td>${c.quantity}</td>
+		<td>${c.quantity}</td> --%>
 		
 		<td>
-		<a href= "./remove.htm?id=${c.id}" onclick="return confirm("Are you sure?")"> Remove </a>
+		<a href= "/OneStopShop/cart/remove?id=${c.id}" onclick="return confirm("Are you sure?")"> Remove </a>
 		</td>
 		</tr>
 	</c:forEach>
