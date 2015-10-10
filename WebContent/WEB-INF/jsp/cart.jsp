@@ -10,7 +10,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <title>Cart | E-Shopper</title>
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="/OneStopShop/css/bootstrap.min.css" rel="stylesheet">
     <link href="css/font-awesome.min.css" rel="stylesheet">
     <link href="css/prettyPhoto.css" rel="stylesheet">
     <link href="css/price-range.css" rel="stylesheet">
@@ -29,6 +29,7 @@
 </head><!--/head-->
 
 <body>
+
 	<header id="header"><!--header-->
 		<div class="header_top"><!--header_top-->
 			<div class="container">
@@ -146,7 +147,22 @@
 			</div>
 		</div><!--/header-bottom-->
 	</header><!--/header-->
+	<h1>Starts here</h1>
+<table cellpadding="10px" border="1" style="border-collapse: collapse">
+<c:forEach items="${cart}" var="c">
+		<tr>
+		<td>${c.id}</td>
+		<td>${c.image}</td>
+		<td>${c.title}</td>
+		<td>${c.description}</td>
+		<td>${c.price}</td>
+		
+		</tr>
+	</c:forEach>
+	Hello
 
+</table>
+<h1>Ends here</h1>
 	<section id="cart_items">
 		<div class="container">
 			<div class="breadcrumbs">
@@ -482,25 +498,7 @@
 				</div>
 			</div>
 		</div>
-		<c:forEach items="${sessionScope.cartList}" var="c">
-		<tr>
-		<td>${c.id}</td>
-		<td>${c.title}</td>
-		<td>${c.description}</td>
-		<td>${c.price}</td>
-		<td>${c.image}</td>
-		<td>${c.orderDetail}</td>
-		<td>${c.weight}</td> 
-		<td>${c.id}</td>
-		<td>${c.name}</td>
-		<td>${c.price}</td>
-		<td>${c.quantity}</td>
 		
-		<%-- <td>
-		<a href= "/OneStopShop/cart/remove?id=${c.id}" onclick="return confirm("Are you sure?")"> Remove </a>
-		</td> --%>
-		</tr>
-	</c:forEach>
 		
 	</footer><!--/Footer-->
 	

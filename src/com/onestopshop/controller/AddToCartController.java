@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.servlet.ModelAndView;
 
 import com.onestopshop.beans.Item;
 import com.onestopshop.model.Cart;
@@ -32,11 +33,13 @@ public class AddToCartController {
 	}*/
 
 	@RequestMapping(value="/AddCart" ,method= RequestMethod.GET)
-	public void addCart(@RequestParam String item, HttpServletRequest request){
+	public ModelMap addCart(@RequestParam String item, HttpServletRequest request){
 		HttpSession session = request.getSession();
+		ModelMap model=new ModelMap();
 		Cart cart = (Cart) session.getAttribute("cartList");
 		if(cart==null){
 			Cart cartNew = new Cart();
+			model.put("cart", cartNew);
 			session.setAttribute("cartList", cartNew);
 			cart=cartNew;
 		}
@@ -50,14 +53,29 @@ public class AddToCartController {
 			System.out.println(i.getId());
 		}
 		System.out.println();
-		
+		return model;
 	}
 
 	@RequestMapping(value="/viewcart",method=RequestMethod.GET)
-	public String viewCart(ModelMap model){
-		//model.put("cart",new Cart());
+	public String viewCart(ModelMap model,HttpServletRequest request){
+		Cart cart ;
+		HttpSession session = request.getSession();
+		List cartList =( (Cart) session.getAttribute("cartList")).getItemList(); 
+		model.addAttribute("cart", cartList);
+		/*for(Item i: cart.getItemList()){
+			System.out.println(i.getId());
+		}*/
 		return "cart";
+
 	}
+	
+/*	@RequestMapping(value="/viewcart",method=RequestMethod.GET)
+	public ModelAndView viewCart(ModelMap model,@ModelAttribute("cart")Cart cartNew){
+		//model.put("cart",new Cart());
+		ModelAndView modelview=new ModelAndView("cart","cart",cartNew);
+		//return "cart";
+		return modelview;
+	}*/
 	
 	/*//Create function to save items into cart using session variables
 	@RequestMapping(value="/addCart", method= RequestMethod.POST)
