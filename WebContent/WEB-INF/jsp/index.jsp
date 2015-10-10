@@ -121,7 +121,7 @@
 								<li><a href="#"><i class="fa fa-star"></i> Wishlist</a></li>
 								<li><a href="checkout.html"><i class="fa fa-crosshairs"></i>
 										Checkout</a></li>
-								<li><a href="cart.html"><i class="fa fa-shopping-cart"></i>
+								<li><a href="/OneStopShop/cart/viewcart"><i class="fa fa-shopping-cart"></i>
 										Cart</a></li>
 								<li><a href="login.html"><i class="fa fa-lock"></i>
 										Login</a></li>
@@ -164,7 +164,7 @@
 										<li><a href="blog.html">Blog List</a></li>
 										<li><a href="blog-single.html">Blog Single</a></li>
 									</ul></li>
-								<li><a href="404.html">404</a></li>
+								<li><a href="/OneStopShop/jsp/404.jsp">404</a></li>
 								<li><a href="contact-us.html">Contact</a></li>
 							</ul>
 						</div>

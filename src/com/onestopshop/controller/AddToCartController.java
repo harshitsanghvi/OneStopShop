@@ -24,12 +24,12 @@ import com.onestopshop.model.ItemModel;
 @RequestMapping("/cart")
 public class AddToCartController {
 	
-	@RequestMapping(value="/form",method=RequestMethod.GET)
+	/*@RequestMapping(value="/form",method=RequestMethod.GET)
 	public String index(ModelMap model){
 		
 		model.put("cart",new Cart());
 		return "cartForm";
-	}
+	}*/
 
 	@RequestMapping(value="/AddCart" ,method= RequestMethod.GET)
 	public void addCart(@RequestParam String item, HttpServletRequest request){
