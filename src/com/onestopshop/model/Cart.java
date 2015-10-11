@@ -22,4 +22,8 @@ public class Cart {
 		this.itemList.add(item);
 	}
 	
+	public void removeItem(Item item){
+		this.itemList.remove(item);
+	}
+	
 }

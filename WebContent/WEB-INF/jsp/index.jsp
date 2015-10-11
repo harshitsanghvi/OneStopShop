@@ -34,6 +34,20 @@
  	});
 }
 </script>
+
+<script type="text/javascript">
+	function removetest(objectName){
+	$.ajax({
+ 	    url: 'cart/RemoveCart',
+ 	    type: 'GET',
+ 	    data: {item : objectName},
+ 	    success: function(response){
+ 	    	alert(objectName+" removed from cart");
+ 	    }
+ 	});
+}
+</script>
+    
     
 <link rel="shortcut icon" href="images/ico/favicon.ico">
 <link rel="apple-touch-icon-precomposed" sizes="144x144"

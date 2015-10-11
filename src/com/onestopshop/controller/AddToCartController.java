@@ -55,6 +55,7 @@ public class AddToCartController {
 		System.out.println();
 		return model;
 	}
+	
 
 	@RequestMapping(value="/viewcart",method=RequestMethod.GET)
 	public String viewCart(ModelMap model,HttpServletRequest request){
@@ -76,14 +77,26 @@ public class AddToCartController {
 
 	}
 	
-/*	@RequestMapping(value="/viewcart",method=RequestMethod.GET)
-	public ModelAndView viewCart(ModelMap model,@ModelAttribute("cart")Cart cartNew){
-		//model.put("cart",new Cart());
-		ModelAndView modelview=new ModelAndView("cart","cart",cartNew);
-		//return "cart";
-		return modelview;
-	}*/
-	
+	@RequestMapping(value="/RemoveCart",method= RequestMethod.GET)
+	public void removeCart(@RequestParam Item item, HttpServletRequest request){
+		HttpSession session = request.getSession();
+		ModelMap model=new ModelMap();
+		Cart cart = (Cart) session.getAttribute("cartList");
+		if(cart==null){
+		/*	Cart cartNew = new Cart();*/
+			/*model.put("cart", cartNew);
+			session.setAttribute("cartList", cartNew);
+			cart=cartNew;*/
+			System.out.println("Cart is null");
+		}
+		cart.removeItem(item);
+		/*ItemModel itemModel = new ItemModel();*/
+		/*Item itemAdd = new Item();*/
+	/*	itemAdd = itemModel.getItem(Integer.parseInt(item),itemAdd);*/
+		
+		
+	}
+
 	/*//Create function to save items into cart using session variables
 	@RequestMapping(value="/addCart", method= RequestMethod.POST)
 	public String addCart(@ModelAttribute Cart cart, HttpSession session){

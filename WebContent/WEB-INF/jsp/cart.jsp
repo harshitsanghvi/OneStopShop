@@ -221,8 +221,9 @@
 							</td>
 							<td class="product-price"><span class="amount">Rs.
 									${item.price}</span></td>
+							
 							<td class="cart_delete"><a class="cart_quantity_delete"
-								href=""><i class="fa fa-times"></i></a></td>
+								href="/OneStopShop/cart/RemoveCart"><i class="fa fa-times"></i></a></td>
 
 						</tr>
 					</c:forEach>
