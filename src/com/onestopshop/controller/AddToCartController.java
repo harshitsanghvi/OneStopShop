@@ -1,21 +1,16 @@
 package com.onestopshop.controller;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
-import javax.validation.Valid;
 
-import org.springframework.http.HttpRequest;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
-import org.springframework.web.bind.annotation.ModelAttribute;
+
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.servlet.ModelAndView;
 
 import com.onestopshop.beans.Item;
 import com.onestopshop.model.Cart;
@@ -52,7 +47,7 @@ public class AddToCartController {
 		for(Item i: cart.getItemList()){
 			System.out.println(i.getId());
 		}
-		System.out.println();
+	
 		return model;
 	}
 	
@@ -63,18 +58,8 @@ public class AddToCartController {
 		HttpSession session = request.getSession();
 		List cartList =( (Cart) session.getAttribute("cartList")).getItemList(); 
 		model.addAttribute("cart", cartList);
-		/*for(Item i: cart.getItemList()){
-			System.out.println(i.getId());
-		}*/
 		model.addAttribute("item", new Item());
 		return "cart";
-
-	}
-	
-	@RequestMapping(value="/checkout",method=RequestMethod.GET)
-	public String checkout(ModelMap model){
-		
-		return "checkout";
 
 	}
 	
@@ -94,12 +79,17 @@ public class AddToCartController {
 		model.addAttribute("cart", cartList);
 		
 		return "cart";
-		/*ItemModel itemModel = new ItemModel();*/
-		/*Item itemAdd = new Item();*/
-	/*	itemAdd = itemModel.getItem(Integer.parseInt(item),itemAdd);*/
-		
-		
+				
 	}
+	
+	@RequestMapping(value="/checkout",method=RequestMethod.GET)
+	public String checkout(ModelMap model){
+		
+		return "checkout";
+
+	}
+	
+	
 
 	/*//Create function to save items into cart using session variables
 	@RequestMapping(value="/addCart", method= RequestMethod.POST)

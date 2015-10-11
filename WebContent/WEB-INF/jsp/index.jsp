@@ -475,7 +475,7 @@
 											<h2>Rs. ${item.price}</h2>
 											<p>${item.title}</p>
 											<a href="#" class="btn btn-default add-to-cart"><i
-												class="fa fa-shopping-cart"></i>Add to cart</a>
+												class="fa fa-shopping-cart" ></i>Add to cart</a>
 										</div>
 										<div class="product-overlay">
 											<div class="overlay-content">
@@ -485,7 +485,7 @@
 												<h2>Rs. ${item.price}</h2>
 												<p>${item.title}</p>
 												<a href="#" class="btn btn-default add-to-cart" onclick="addtest('${item.id}');return false;" value="${item.id}"><i
-													class="fa fa-shopping-cart"></i>Add to cart</a>
+													class="fa fa-shopping-cart" ></i>Add to cart</a>
 											</div>
 										</div>
 									</div>
@@ -525,7 +525,7 @@
 												<h2>$56</h2>
 												<p>Easy Polo Black Edition</p>
 												<a href="#" class="btn btn-default add-to-cart"><i
-													class="fa fa-shopping-cart"></i>Add to cart</a>
+													class="fa fa-shopping-cart" ></i>Add to cart</a>
 											</div>
 
 										</div>
@@ -539,7 +539,7 @@
 												<h2>$56</h2>
 												<p>Easy Polo Black Edition</p>
 												<a href="#" class="btn btn-default add-to-cart"><i
-													class="fa fa-shopping-cart"></i>Add to cart</a>
+													class="fa fa-shopping-cart" ></i>Add to cart</a>
 											</div>
 
 										</div>
@@ -553,7 +553,7 @@
 												<h2>$56</h2>
 												<p>Easy Polo Black Edition</p>
 												<a href="#" class="btn btn-default add-to-cart"><i
-													class="fa fa-shopping-cart"></i>Add to cart</a>
+													class="fa fa-shopping-cart" ></i>Add to cart</a>
 											</div>
 
 										</div>

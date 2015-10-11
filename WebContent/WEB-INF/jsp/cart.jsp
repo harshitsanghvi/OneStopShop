@@ -190,11 +190,10 @@
 						<td class="image">Item</td>
 						<td class="title">Title</td>
 						<td class="description">Description</td>
-						<td class="quantity">Quantity</td>
+					<!-- 	<td class="quantity">Quantity</td> -->
 						<td class="price">Price</td>
-						<!-- <td class="quantity">Quantity</td>
-						<td class="total">Total</td> -->
-						<td></td>
+						<!-- <td class="quantity">Quantity</td> -->
+						<!-- <td class="total">Total</td>  -->
 					</tr>
 				</thead>
 				<tbody>
@@ -209,22 +208,23 @@
 							</td>
 
 							<td>${item.description}</td>
-							<td class="cart_quantity">
-								<div class="cart_quantity_button">
-									<a class="cart_quantity_up" href=""> + </a> <input
-										class="cart_quantity_input" type="text" name="quantity"
-										value="1" autocomplete="off" size="2"> <a
-										class="cart_quantity_down" href=""> - </a>
-								</div>
-							</td>
-							<td class="product-price"><span class="amount">Rs.
-									${item.price}</span></td>
 							
-							<td class="cart_delete"><a class="cart_quantity_delete"
-								href="/OneStopShop/cart/RemoveCart"><i class="fa fa-times"></i></a></td>
-
+							<td class="product-price"><span class="amount">Rs.${item.price}</span></td>
+							
+							<td class="cart_delete">
+							<div class="cart__delete_button">
+							<c:set var="totalPrice" value="${0}" />
+       
+							<a class="cart_quantity_delete"
+								href="/OneStopShop/cart/RemoveCart">
+								 <!-- <input
+										class="cart__delete_button" type="hidden" name="delete"
+										value="1" autocomplete="off" size="2" onclick="alert("deleted")">  -->
+										<i class="fa fa-times"></i></a></td>
+							</div>
 						</tr>
 					</c:forEach>
+					
 					<tr>
 						<!-- <td class="cart_product"><a href=""><img
 								src="/OneStopShop/images/cart/one.png" alt=""></a></td>
@@ -362,12 +362,9 @@
 				<div class="total_area">
 					<ul>
 						<li>Cart Sub Total <span>$59</span></li>
-						<li>Eco Tax <span>$2</span></li>
-						<li>Shipping Cost <span>Free</span></li>
-						<li>Total <span>$61</span></li>
 					</ul>
-					<a class="btn btn-default update" href="">Update</a> <a
-						class="btn btn-default check_out" href="">Check Out</a>
+					<!-- <a class="btn btn-default update" href="">Update</a> --> <a
+						class="btn btn-default check_out" href="/OneStopShop/cart/checkout">Check Out</a>
 				</div>
 			</div>
 		</div>
@@ -384,8 +381,7 @@
 						<h2>
 							<span>e</span>-shopper
 						</h2>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing
-							elit,sed do eiusmod tempor</p>
+						
 					</div>
 				</div>
 				<div class="col-sm-7">
@@ -452,7 +448,11 @@
 				<div class="col-sm-3">
 					<div class="address">
 						<img src="/OneStopShop/images/home/map.png" alt="" />
-						<p>505 S Atlantic Ave Virginia Beach, VA(Virginia)</p>
+						<p>E-Shopper Inc.</p>
+							<p>Unitech Infospace,Tower 8</p>
+							 <p>Sector 21 Old Delhi, Gurgaon Road Dundahera,</p>
+							 <p>Gurgaon,</p> 
+							<p>Haryana 122016</p>p>
 					</div>
 				</div>
 			</div>
@@ -558,56 +558,3 @@
 </html>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<%-- 
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
-</head>
-<body>
-	<h1>Your Cart</h1>
-	<h1>Starts here</h1>
-<table cellpadding="10px" border="1" style="border-collapse: collapse">
-<c:forEach items="${cart}" var="c">
-		<tr>
-		<td>${c.id}</td>
-		<td>${c.image}</td>
-		<td>${c.title}</td>
-		<td>${c.description}</td>
-		<td>${c.price}</td>
-		</tr>
-	</c:forEach>
-	Hello
-
-</table>
-<h1>Ends here</h1>
-	
-	<table cellpadding="10px" border="1" style="border-collapse: collapse">
-	
-	<tr>
-	<td colspan="2">
-	Total : "${sessionScope[total]}"
-	</table>
-	
-		<a href= "/OneStopShop/cart/form"> Continue Shopping</a> 
-	
-</body>
-</html> --%>

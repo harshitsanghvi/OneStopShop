@@ -26,4 +26,8 @@ public class Cart {
 		this.itemList.remove(item);
 	}
 	
+	/*public String totalPrice(Item item){
+		return itemList. ;
+	}
+	*/
 }
