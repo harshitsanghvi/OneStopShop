@@ -115,8 +115,6 @@
 							<li><a href=""><i class="fa fa-star"></i> Wishlist</a></li>
 							<li><a href="/OneStopShop/logout"><i class="fa fa-crosshairs"></i>
 									Logout</a></li>
-							<li><a href="cart.html" class="active"><i
-									class="fa fa-shopping-cart"></i> Cart</a></li>
 							<li><a href="/OneStopShop/login"><i class="fa fa-lock"></i>
 									Login</a></li>
 						</ul>

@@ -66,6 +66,7 @@ public class AddToCartController {
 		/*for(Item i: cart.getItemList()){
 			System.out.println(i.getId());
 		}*/
+		model.addAttribute("item", new Item());
 		return "cart";
 
 	}
@@ -78,18 +79,21 @@ public class AddToCartController {
 	}
 	
 	@RequestMapping(value="/RemoveCart",method= RequestMethod.GET)
-	public void removeCart(@RequestParam Item item, HttpServletRequest request){
+	public String removeCart(Item item, HttpServletRequest request){
 		HttpSession session = request.getSession();
 		ModelMap model=new ModelMap();
 		Cart cart = (Cart) session.getAttribute("cartList");
 		if(cart==null){
-		/*	Cart cartNew = new Cart();*/
-			/*model.put("cart", cartNew);
-			session.setAttribute("cartList", cartNew);
-			cart=cartNew;*/
+		
 			System.out.println("Cart is null");
 		}
+		List cartList =( (Cart) session.getAttribute("cartList")).getItemList(); 
 		cart.removeItem(item);
+		model.clear();
+		model.addAttribute("item", new Item());
+		model.addAttribute("cart", cartList);
+		
+		return "cart";
 		/*ItemModel itemModel = new ItemModel();*/
 		/*Item itemAdd = new Item();*/
 	/*	itemAdd = itemModel.getItem(Integer.parseInt(item),itemAdd);*/
