@@ -26,8 +26,10 @@ public class Cart {
 		this.itemList.remove(item);
 	}
 	
-	/*public String totalPrice(Item item){
-		return itemList. ;
+	public int totalPrice(){
+		int sum = 0;
+		for(int i = 0; i< itemList.size();i++)
+			sum = sum+ itemList.get(i).getPrice();
+		return sum;
 	}
-	*/
 }

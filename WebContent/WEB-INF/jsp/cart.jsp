@@ -6,6 +6,26 @@
 
 <html lang="en">
 <head>
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script type="text/javascript">
+	function removetest(objectName){
+	 $.ajax({
+ 	    url: '/OneStopShop/cart/RemoveCart',
+ 	    type: 'GET',
+ 	    data: {item : objectName},
+ 	    success: function(response){
+ 	    	alert(objectName+" removed from cart");
+ 	    }
+ 	}); 
+}
+	
+	$(document).on('click','button.removebutton', function() {
+		  $(this).closest('tr').fadeOut("slow");;
+		  return false;
+		});
+</script>
+
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="">
@@ -147,7 +167,7 @@
 									<li><a href="shop.html">Products</a></li>
 									<li><a href="product-details.html">Product Details</a></li>
 									<li><a href="/OneStopShop/logout">Logout</a></li>
-									<li><a href="cart.html" class="active">Cart</a></li>
+									<li><a href="/OneStopShop/cart/viewcart" class="active">Cart</a></li>
 									<li><a href="/OneStopShop/login">Login</a></li>
 								</ul></li>
 							<li class="dropdown"><a href="#">Blog<i
@@ -216,11 +236,11 @@
 							<c:set var="totalPrice" value="${0}" />
        
 							<a class="cart_quantity_delete"
-								href="/OneStopShop/cart/RemoveCart">
+								href="#" onclick="removetest('${item.id}');return false;" value="${item.id}"><button class="removebutton">Delete</button>
 								 <!-- <input
 										class="cart__delete_button" type="hidden" name="delete"
 										value="1" autocomplete="off" size="2" onclick="alert("deleted")">  -->
-										<i class="fa fa-times"></i></a></td>
+										</a></td>
 							</div>
 						</tr>
 					</c:forEach>
@@ -362,7 +382,7 @@
 			<div class="col-sm-6">
 				<div class="total_area">
 					<ul>
-						<li>Cart Sub Total <span>$59</span></li>
+						<li>Cart Sub Total <span>Rs. ${total} /-</span></li>
 					</ul>
 					<!-- <a class="btn btn-default update" href="">Update</a> --> <a
 						class="btn btn-default check_out" href="/OneStopShop/cart/checkout">Check Out</a>

@@ -94,4 +94,15 @@ public class Item {
 		this.id = id;
 	}
 	
+	@Override
+	public int hashCode() {
+		// TODO Auto-generated method stub
+		return price;
+	}
+	
+	@Override
+	public boolean equals(Object obj) {
+		// TODO Auto-generated method stub
+		return this.price==((Item)obj).price;
+	}
 }

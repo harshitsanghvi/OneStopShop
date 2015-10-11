@@ -1,5 +1,6 @@
 package com.onestopshop.controller;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
@@ -7,7 +8,6 @@ import javax.servlet.http.HttpSession;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
-
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -54,39 +54,44 @@ public class AddToCartController {
 
 	@RequestMapping(value="/viewcart",method=RequestMethod.GET)
 	public String viewCart(ModelMap model,HttpServletRequest request){
-		Cart cart ;
 		HttpSession session = request.getSession();
-		List cartList =( (Cart) session.getAttribute("cartList")).getItemList(); 
+		Cart cart = new Cart();
+		List cartList=new ArrayList();
+		int total = 0;
+		if(((Cart)session.getAttribute("cartList"))!=null)
+		{	
+			cart.setItemList(((Cart) session.getAttribute("cartList")).getItemList());
+			cartList=cart.getItemList();
+			total = ((Cart)session.getAttribute("cartList")).totalPrice();
+		}
 		model.addAttribute("cart", cartList);
 		model.addAttribute("item", new Item());
+		model.addAttribute("total",total);
 		return "cart";
 
 	}
 	
 	@RequestMapping(value="/RemoveCart",method= RequestMethod.GET)
-	public String removeCart(Item item, HttpServletRequest request){
+	public ModelMap removeCart(@RequestParam String item, HttpServletRequest request){
 		HttpSession session = request.getSession();
 		ModelMap model=new ModelMap();
-		Cart cart = (Cart) session.getAttribute("cartList");
-		if(cart==null){
-		
-			System.out.println("Cart is null");
-		}
-		List cartList =( (Cart) session.getAttribute("cartList")).getItemList(); 
-		cart.removeItem(item);
-		model.clear();
-		model.addAttribute("item", new Item());
-		model.addAttribute("cart", cartList);
-		
-		return "cart";
-				
+		Cart cart = (Cart)session.getAttribute("cartList");
+		List items = cart.getItemList();
+		ItemModel itemMod = new ItemModel();
+		Item itemRem = new Item();
+		itemRem = itemMod.getItem(Integer.parseInt(item),itemRem);
+		items.remove(itemRem);
+		cart.setItemList(items);
+		session.setAttribute("cartList",cart);
+		System.out.println("done");
+		return model;
 	}
 	
 	@RequestMapping(value="/checkout",method=RequestMethod.GET)
-	public String checkout(ModelMap model){
-		
+	public String checkout(ModelMap model, HttpServletRequest request){
+		HttpSession session = request.getSession();
+		session.invalidate();
 		return "checkout";
-
 	}
 	
 	
