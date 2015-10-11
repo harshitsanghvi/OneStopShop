@@ -1,8 +1,18 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
+<link href="/OneStopShop/css/bootstrap.min.css" rel="stylesheet">
+<link href="/OneStopShop/css/font-awesome.min.css" rel="stylesheet">
+<link href="/OneStopShop/css/prettyPhoto.css" rel="stylesheet">
+<link href="/OneStopShop/css/price-range.css" rel="stylesheet">
+<link href="/OneStopShop/css/animate.css" rel="stylesheet">
+<link href="/OneStopShop/css/main.css" rel="stylesheet">
+<link href="/OneStopShop/css/responsive.css" rel="stylesheet">
+
+
 <form:form id="login-form" method="post" action="verify"
 	commandName="login" role="form">
+	
 	<div class="form-group">
 		<form:input path="uname" type="text" name="uname" id="uname"
 			tabindex="1" class="form-control" placeholder="Username" />
@@ -20,4 +30,6 @@
 			</div>
 		</div>
 	</div>
+	
 </form:form>
+
