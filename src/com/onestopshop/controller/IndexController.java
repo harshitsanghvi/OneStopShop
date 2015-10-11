@@ -33,7 +33,7 @@ public class IndexController {
 			public String logOut(ModelMap model,HttpSession session) {
 				session.invalidate();
 				model.addAttribute("login", new LoginBean());
-				return "login";
+				return "index";
 			}
 
 	

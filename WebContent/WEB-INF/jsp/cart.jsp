@@ -331,7 +331,8 @@
 								Shipping & Taxes</label></li>
 					</ul>
 					<ul class="user_info">
-						<li class="single_field"><label>Country:</label> <select>
+						<li class="single_field"><label>Country:</label>
+						 <select>
 								<option>United States</option>
 								<option>Bangladesh</option>
 								<option>UK</option>
@@ -354,8 +355,8 @@
 						<li class="single_field zip-field"><label>Zip Code:</label> <input
 							type="text"></li>
 					</ul>
-					<a class="btn btn-default update" href="">Get Quotes</a> <a
-						class="btn btn-default check_out" href="">Continue</a>
+					<!-- <a class="btn btn-default update" href="">Get Quotes</a> <a
+						class="btn btn-default check_out" href="">Continue</a> -->
 				</div>
 			</div>
 			<div class="col-sm-6">
