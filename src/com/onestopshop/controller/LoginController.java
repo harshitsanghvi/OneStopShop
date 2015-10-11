@@ -26,13 +26,16 @@ public class LoginController {
 		String uname = login.getUname();
 		String password = login.getPassword();
 		LoginModel objLoginModel = new LoginModel();
+		
 		System.out.println(uname + password);
 		if (uname != null && password != null) {
 			if (objLoginModel.validateUser(login)) {
 				
-				HttpSession session = request.getSession();
+				HttpSession session = request.getSession(true);
+				
 				Cart cart = new Cart();
 				session.setAttribute("cartList", cart);
+				session.setAttribute("username", login.getUname());
 				
 				return "index";
 			}

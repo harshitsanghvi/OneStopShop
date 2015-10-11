@@ -2,6 +2,8 @@ package com.onestopshop.controller;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.servlet.http.HttpSession;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -26,5 +28,13 @@ public class IndexController {
 		}
 		return "errors";
 	}
+	
+		@RequestMapping(value = "/logout", method = RequestMethod.GET)
+			public String logOut(ModelMap model,HttpSession session) {
+				session.invalidate();
+				model.addAttribute("login", new LoginBean());
+				return "login";
+			}
+
 	
 }

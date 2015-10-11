@@ -90,18 +90,18 @@
 						</div>
 						<div class="btn-group pull-right">
 							<div class="btn-group">
-								<button type="button"
+								<!-- <button type="button"
 									class="btn btn-default dropdown-toggle usa"
 									data-toggle="dropdown">
 									USA <span class="caret"></span>
-								</button>
-								<ul class="dropdown-menu">
+								</button> -->
+								<!-- <ul class="dropdown-menu">
 									<li><a href="#">Canada</a></li>
 									<li><a href="#">UK</a></li>
-								</ul>
+								</ul> -->
 							</div>
 
-							<div class="btn-group">
+							<!-- <div class="btn-group">
 								<button type="button"
 									class="btn btn-default dropdown-toggle usa"
 									data-toggle="dropdown">
@@ -111,7 +111,7 @@
 									<li><a href="#">Canadian Dollar</a></li>
 									<li><a href="#">Pound</a></li>
 								</ul>
-							</div>
+							</div> -->
 						</div>
 					</div>
 					<div class="col-sm-8">
@@ -119,12 +119,14 @@
 							<ul class="nav navbar-nav">
 								<li><a href="/OneStopShop/register"><i class="fa fa-user"></i> Account</a></li>
 								<li><a href="#"><i class="fa fa-star"></i> Wishlist</a></li>
-								<li><a href="checkout.html"><i class="fa fa-crosshairs"></i>
-										Checkout</a></li>
+								<li><a href="/OneStopShop/logout"><i class="fa fa-crosshairs"></i>
+										LogOut</a></li>
 								<li><a href="/OneStopShop/cart/viewcart"><i class="fa fa-shopping-cart"></i>
 										Cart</a></li>
 								<li><a href="login"><i class="fa fa-lock"></i>
 										Login</a></li>
+										<li><a href="login"><i class="fa fa-lock"></i>
+										${sessionScope.username}</a></li>
 							</ul>
 						</div>
 					</div>
@@ -154,7 +156,7 @@
 									<ul role="menu" class="sub-menu">
 										<li><a href="shop.html">Products</a></li>
 										<li><a href="product-details.html">Product Details</a></li>
-										<li><a href="checkout.html">Checkout</a></li>
+										<li><a href="/OneStopShop/logout">Logout</a></li>
 										<li><a href="cart/viewcart">Cart</a></li>
 										<li><a href="/OneStopShop/login">Login</a></li>
 									</ul></li>

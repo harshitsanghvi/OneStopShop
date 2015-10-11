@@ -114,7 +114,7 @@ pageEncoding="ISO-8859-1"%>
 						</div>
 						<div class="mainmenu pull-left">
 							<ul class="nav navbar-nav collapse navbar-collapse">
-								<li><a href="index.html">Home</a></li>
+								<li><a href="/OneStopShop/index">Home</a></li>
 								<li class="dropdown"><a href="#">Shop<i class="fa fa-angle-down"></i></a>
                                     <ul role="menu" class="sub-menu">
                                         <li><a href="shop.html">Products</a></li>
@@ -293,6 +293,7 @@ pageEncoding="ISO-8859-1"%>
 						<div class="col-sm-5">
 							<div class="view-product">
 								<img id="image" src="${pageContext.request.contextPath}${item.image}" alt="Product image" />
+								
 								<h3>ZOOM</h3>
 							</div>
 							<div id="similar-product" class="carousel slide" data-ride="carousel">
