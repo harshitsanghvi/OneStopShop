@@ -13,12 +13,17 @@
     <title>Cart | E-Shopper</title>
     <link href="/OneStopShop/css/bootstrap.min.css" rel="stylesheet">
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> c96a18619313cf5babf0b21a3395b588b21f15c9
     <link href="/OneStopShop/css/font-awesome.min.css" rel="stylesheet">
     <link href="/OneStopShop/css/prettyPhoto.css" rel="stylesheet">
     <link href="/OneStopShop/css/price-range.css" rel="stylesheet">
     <link href="/OneStopShop/css/animate.css" rel="stylesheet">
 	<link href="/OneStopShop/css/main.css" rel="stylesheet">
 	<link href="/OneStopShop/css/responsive.css" rel="stylesheet">
+<<<<<<< HEAD
+=======
 =======
     <link href="css/font-awesome.min.css" rel="stylesheet">
     <link href="css/prettyPhoto.css" rel="stylesheet">
@@ -27,15 +32,16 @@
 	<link href="css/main.css" rel="stylesheet">
 	<link href="css/responsive.css" rel="stylesheet">
 >>>>>>> a9e278ba6784119494ba1282f77ddc10fb568273
+>>>>>>> c96a18619313cf5babf0b21a3395b588b21f15c9
     <!--[if lt IE 9]>
     <script src="js/html5shiv.js"></script>
     <script src="js/respond.min.js"></script>
     <![endif]-->       
     <link rel="shortcut icon" href="images/ico/favicon.ico">
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/ico/apple-touch-icon-144-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/ico/apple-touch-icon-114-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/ico/apple-touch-icon-72-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/OneStopShop/images/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/OneStopShop/images/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/OneStopShop/images/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="/OneStopShop/images/ico/apple-touch-icon-57-precomposed.png">
 </head><!--/head-->
 
 <body>
@@ -166,7 +172,6 @@
 		<td>${c.title}</td>
 		<td>${c.description}</td>
 		<td>${c.price}</td>
-		
 		</tr>
 	</c:forEach>
 	Hello
