@@ -69,6 +69,13 @@ public class AddToCartController {
 
 	}
 	
+	@RequestMapping(value="/checkout",method=RequestMethod.GET)
+	public String checkout(ModelMap model){
+		
+		return "checkout";
+
+	}
+	
 /*	@RequestMapping(value="/viewcart",method=RequestMethod.GET)
 	public ModelAndView viewCart(ModelMap model,@ModelAttribute("cart")Cart cartNew){
 		//model.put("cart",new Cart());
