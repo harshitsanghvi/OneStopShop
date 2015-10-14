@@ -15,13 +15,14 @@
 	
 
 	<div class="form-group">
-		<form:input path="uname" type="text" name="uname" id="uname"
+		<form:input path="uname" type="text"
 			tabindex="1" class="form-control" placeholder="Username" />
+			<form:errors path="uname"/>
 	</div>
 	<div class="form-group">
-		<form:input path="password" type="password" name="password"
-			id="password" tabindex="2" class="form-control"
-			placeholder="Password" />
+		<form:input path="password" type="password"
+			tabindex="2" class="form-control" placeholder="Password" />
+			<form:errors path="password"/>
 	</div>
 	<div class="form-group">
 		<div class="row">

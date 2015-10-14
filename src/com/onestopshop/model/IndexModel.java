@@ -1,7 +1,6 @@
 package com.onestopshop.model;
 
 import java.util.ArrayList;
-import java.util.List;
 
 import com.onestopshop.beans.Item;
 import com.onestopshop.dao.IndexDao;

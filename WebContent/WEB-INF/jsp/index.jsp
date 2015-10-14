@@ -137,10 +137,7 @@
 										LogOut</a></li>
 								<li><a href="/OneStopShop/cart/viewcart"><i class="fa fa-shopping-cart"></i>
 										Cart</a></li>
-								<li><a href="login"><i class="fa fa-lock"></i>
-										Login</a></li>
-										<li><a href="login"><i class="fa fa-lock"></i>
-										${sessionScope.username}</a></li>
+								<li><a href="#"><i class="fa fa-lock"></i>${sessionScope.username}</a></li>
 							</ul>
 						</div>
 					</div>

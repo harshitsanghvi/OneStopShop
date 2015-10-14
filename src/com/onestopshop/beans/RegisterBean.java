@@ -5,6 +5,9 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.persistence.Transient;
+
+import org.hibernate.validator.constraints.NotEmpty;
 
 @Entity
 @Table(name = "USERPROFILE")
@@ -14,33 +17,47 @@ public class RegisterBean {
 	@Column(name="ID", nullable = false)
 	private Long id;
 	
+	@NotEmpty
 	@Column(name = "FIRSTNAME", nullable = false)
 	private String firstName;
 	
+	@NotEmpty
 	@Column(name = "LASTNAME", nullable = false)
 	private String lastName;
 	
+	@Transient
 	private String uname;
+	
+	@Transient
 	private String password;
 
+	@GeneratedValue
 	@Column(name = "USERID", nullable = false)
 	private Long userId;
 	
+	@NotEmpty
 	@Column(name = "PHONE", nullable = false)
 	private Long phone;
 	
+	@Transient
 	private String addressLineOne;
 	
+	@Transient
 	private String addressLineTwo;
 	
+	@Transient
 	private String city;
 	
+	@Transient
 	private String state;
 	
+	@Transient
 	private String country;
 	
+	@Transient
 	private Integer zip;
 	
+	@GeneratedValue
 	@Column(name = "ADDRESSID", nullable = false)
 	private Long addressId;
 	

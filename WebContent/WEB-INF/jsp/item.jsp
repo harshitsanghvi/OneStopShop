@@ -339,7 +339,7 @@ pageEncoding="ISO-8859-1"%>
 									<span>Rs. ${item.price}</span>
 									<label>Quantity:</label>
 									<input type="text" value="1" />
-									<button type="button" class="btn btn-fefault cart">
+									<button type="button" class="btn btn-fefault cart" onclick="addtest('${item.id}');return false;" value="${item.id}">
 										<i class="fa fa-shopping-cart"></i>
 										Add to cart
 									</button>

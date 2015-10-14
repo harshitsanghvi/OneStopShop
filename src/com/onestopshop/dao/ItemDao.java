@@ -26,7 +26,7 @@ public class ItemDao {
 			Query query = session.createQuery(SQL_QUERY);
 
 			Item item = new Item();
-			for (Iterator iterator = query.iterate(); iterator.hasNext();) {
+			for (Iterator<?> iterator = query.iterate(); iterator.hasNext();) {
 				Object[] row = (Object[]) iterator.next();
 				item.setId((long) row[0]);
 				item.setTitle((String) row[1]);

@@ -6,17 +6,24 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import org.hibernate.validator.constraints.Email;
+import org.hibernate.validator.constraints.NotEmpty;
+
 @Entity
 @Table(name = "USERLOGIN")
 public class LoginBean {
 
+	
 	@Id @GeneratedValue
 	@Column(name="ID", nullable = false)
 	private Long id;
 	
+	@NotEmpty
+	@Email
 	@Column(name="UNAME", nullable = false)
 	private String uname;
 	
+	@NotEmpty
 	@Column(name="PASSWORD", nullable = false)
 	private String password;
 	

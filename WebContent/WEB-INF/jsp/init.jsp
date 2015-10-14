@@ -29,6 +29,8 @@
 	href="images/ico/apple-touch-icon-72-precomposed.png">
 <link rel="apple-touch-icon-precomposed"
 	href="images/ico/apple-touch-icon-57-precomposed.png">
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 </head>
 <!--/head-->
 
@@ -171,17 +173,17 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-4 col-sm-offset-1">
-					<div class="login-form">
+					<div id="loginForm" class="login-form">
 						<!--login form-->
 						<h2>Login to your account</h2>
-                        <iframe src="login"></iframe>
-						<form action="#">
+						<iframe src="login" target="_parent"></iframe>
+						<%-- <form action="#">
 							<input type="text" placeholder="Name" /> <input type="email"
 								placeholder="Email Address" /> <span> <input
 								type="checkbox" class="checkbox"> Keep me signed in
 							</span>
 							<button type="submit" class="btn btn-default">Login</button>
-						</form>
+						</form> --%>
 					</div>
 					<!--/login form-->
 				</div>
@@ -189,16 +191,16 @@
 					<h2 class="or">OR</h2>
 				</div>
 				<div class="col-sm-4">
-					<div class="signup-form">
+					<div id="registerForm" class="signup-form">
 						<!--sign up form-->
 						<h2>New User Signup!</h2>
 						<iframe src="register"></iframe>
-						<form action="#">
+						<%-- <form action="#">
 							<input type="text" placeholder="Name" /> <input type="email"
 								placeholder="Email Address" /> <input type="password"
 								placeholder="Password" />
 							<button type="submit" class="btn btn-default">Signup</button>
-						</form>
+						</form> --%>
 					</div>
 					<!--/sign up form-->
 				</div>
@@ -388,5 +390,6 @@
 	<script src="js/bootstrap.min.js"></script>
 	<script src="js/jquery.prettyPhoto.js"></script>
 	<script src="js/main.js"></script>
+	<script>$("#registerForm").load("/register");</script>
 </body>
 </html>

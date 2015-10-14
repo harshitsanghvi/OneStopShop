@@ -56,7 +56,7 @@ public class AddToCartController {
 	public String viewCart(ModelMap model,HttpServletRequest request){
 		HttpSession session = request.getSession();
 		Cart cart = new Cart();
-		List cartList=new ArrayList();
+		List<Item> cartList=new ArrayList<Item>();
 		int total = 0;
 		if(((Cart)session.getAttribute("cartList"))!=null)
 		{	
@@ -76,7 +76,7 @@ public class AddToCartController {
 		HttpSession session = request.getSession();
 		ModelMap model=new ModelMap();
 		Cart cart = (Cart)session.getAttribute("cartList");
-		List items = cart.getItemList();
+		List<Item> items = cart.getItemList();
 		ItemModel itemMod = new ItemModel();
 		Item itemRem = new Item();
 		itemRem = itemMod.getItem(Integer.parseInt(item),itemRem);

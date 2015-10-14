@@ -1,6 +1,5 @@
 package com.onestopshop.controller;
 import java.util.ArrayList;
-import java.util.List;
 
 import javax.servlet.http.HttpSession;
 
@@ -9,12 +8,10 @@ import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import com.onestopshop.beans.AddressBean;
 import com.onestopshop.beans.Item;
 import com.onestopshop.beans.LoginBean;
 import com.onestopshop.beans.RegisterBean;
 import com.onestopshop.model.IndexModel;
-import com.onestopshop.model.RegisterModel;
 
 @Controller
 public class IndexController {
@@ -33,7 +30,8 @@ public class IndexController {
 			public String logOut(ModelMap model,HttpSession session) {
 				session.invalidate();
 				model.addAttribute("login", new LoginBean());
-				return "index";
+				model.addAttribute("register", new RegisterBean());
+				return "init";
 			}
 
 	

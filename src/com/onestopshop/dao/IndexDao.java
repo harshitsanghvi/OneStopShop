@@ -2,7 +2,6 @@ package com.onestopshop.dao;
 
 import java.util.ArrayList;
 import java.util.Iterator;
-import java.util.List;
 
 import org.hibernate.HibernateException;
 import org.hibernate.Query;
@@ -10,7 +9,6 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.hibernate.cfg.AnnotationConfiguration;
-import org.hibernate.cfg.Configuration;
 
 import com.onestopshop.beans.Item;
 
@@ -29,7 +27,7 @@ public class IndexDao {
 			Query query = session.createQuery(SQL_QUERY);
 
 			ArrayList<Item> items = new ArrayList<Item>();
-			for (Iterator iterator = query.iterate(); iterator.hasNext();) {
+			for (Iterator<?> iterator = query.iterate(); iterator.hasNext();) {
 				Object[] row = (Object[]) iterator.next();
 				Item item = new Item();
 				item.setId((long) row[0]);

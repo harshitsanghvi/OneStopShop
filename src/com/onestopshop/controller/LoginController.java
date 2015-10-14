@@ -5,6 +5,7 @@ import javax.servlet.http.HttpSession;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
@@ -18,10 +19,10 @@ import com.onestopshop.model.LoginModel;
 public class LoginController {
 
 	@RequestMapping(value = "/verify", method = RequestMethod.POST)
-	public String loginPage( LoginBean login, BindingResult result, HttpServletRequest request) {
+	public ModelAndView loginPage(@Validated LoginBean login, BindingResult result, HttpServletRequest request) {
 
 		if (result.hasErrors()) {
-			return "errors";
+			return new ModelAndView("login", "login", new LoginBean());
 		} 
 		String uname = login.getUname();
 		String password = login.getPassword();
@@ -37,10 +38,10 @@ public class LoginController {
 				session.setAttribute("cartList", cart);
 				session.setAttribute("username", login.getUname());
 				
-				return "index";
+				return new ModelAndView("index", "index", new LoginBean());
 			}
 		}
-		return "errors";
+		return new ModelAndView("login", "login", new LoginBean());
 	}
 
 	@RequestMapping(value = "/login", method = RequestMethod.GET)
